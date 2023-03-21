@@ -5,5 +5,6 @@ int main()
     printf("Hello kaen");
     printf("Hello mei");
     printf("Hello aomam");
+    printf("Good bye baifern");
     return 0;
 }
