@@ -9,7 +9,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Router from './Router';
 import Project from './Project_01';
 import Page01 from './Page01';
 import Page02 from './Page02';

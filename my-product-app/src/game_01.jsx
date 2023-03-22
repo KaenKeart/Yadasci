@@ -8,7 +8,7 @@ function Game01() {
 <div>
     <Navbar/>
     <Footer/>
-</div>
+</div>      
 
    )
 }
