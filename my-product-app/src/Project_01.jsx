@@ -12,7 +12,7 @@ function Project() {
 
     return (
         <div>
-          <Navbar/>
+          <Navbar/> 
   <div id="slide">
     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
