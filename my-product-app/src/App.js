@@ -1,24 +1,21 @@
 //import logo from './logo.svg';
+import { Route } from 'react-router-dom';
+import React, { Component } from 'react';
 import './App.css';
 import Page01 from './Page01';
 import Page04 from './Page04';
 import Project from './Project_01';
-function App() {
+class App extends Component {
+  render() {
   return (
-    <div className="App">
-      <BrowserRouter>
-    <Routes>
-      <Route path="/" element={ <Project />} />
-      <Route path="home" element={<Page01/>} />
-      <Route path="/product/:productId" element={<Page04/>} />
-      <Route path="report" element={<Report />} />
-    </Routes>
-  </BrowserRouter>
-      <Project />
-      <Page01/>
-      <Page04/>
-    </div>
+    <div className="App container">
+        <Route path="/Project_01" component={Project} />
+        <Route path="/Page01" component={Page01} />
+        <Route path="/Page04" component={Page04} />
+        
+      </div>
   );
+  }
 }
 
 export default App;
