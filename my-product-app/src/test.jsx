@@ -1,4 +1,8 @@
-import test from '../src/img/Logo_YADA.png'
+import Logo_YADA from '../src/img/Logo_YADA.png'
+import Game21 from '../src/img/game_21.jpg'
+import Game11 from '../src/img/game_11.jpg'
+import Game24 from '../src/img/game_24.jpg'
+
 function Test() {
 
     return (
@@ -13,7 +17,7 @@ function Test() {
   <header>
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <a href="Project_01.html"><img src={test} width={120} /></a>
+        <a href="Project_01.html"><img src={Logo_YADA} width={120} /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -130,7 +134,7 @@ function Test() {
   <main>
     <section>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_21.html"><img src="img/game_21.jpg" className="card-img-top" alt="..." width={250} height={250} /></a>
+        <a href="game_21.html"><img src={Game21} className="card-img-top" alt="..." width={250} height={250} /></a>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>เกาะภูตพิทักษ์</h6>
           <div className="text-end text-danger">2,995 ราคา
@@ -139,7 +143,7 @@ function Test() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_11.html"><img src="img/game_11.jpg" className="card-img-top" alt="..." width={250} height={250} /></a>
+        <a href="game_11.html"><img src={Game11} className="card-img-top" alt="..." width={250} height={250} /></a>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส ถนนลี้ลับแห่งอาร์คัม</h6>
           <div className="text-end text-danger">2,650 ราคา
@@ -148,7 +152,7 @@ function Test() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_24.html"><img src="img/game_24.jpg" className="card-img-top" alt="..." width={250} height={250} /></a>
+        <a href="game_24.html"><img src={Game24} className="card-img-top" alt="..." width={250} height={250} /></a>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>เมืองอาชญากรนครย่อส่วนฟูลเฮาส์</h6>
           <div className="text-end text-danger">1,100 ราคา
