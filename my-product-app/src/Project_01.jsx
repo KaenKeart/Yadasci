@@ -130,7 +130,7 @@ function Project() {
       </div>
     </div>
   </div>
-  <Footer/>
+  <Footer/> 
 </div>
 
     )
