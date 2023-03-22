@@ -1,4 +1,5 @@
 import { Carousel } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Game01 from '../src/img/Game01.PNG'
 import Game02 from '../src/img/Game02.png'
 import Game03 from '../src/img/Game03.png'
@@ -84,7 +85,7 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>เกาะภูตพิทักษ์</h6>
           <div className="text-end text-danger">2,995 ราคา
           </div>
-          <a href="#" className="btn btn-primary">หยิบใส่ตะกร้า</a>
+          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
@@ -93,7 +94,7 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส ถนนลี้ลับแห่งอาร์คัม</h6>
           <div className="text-end text-danger">2,650 ราคา
           </div>
-          <a href="#" className="btn btn-primary">หยิบใส่ตะกร้า</a>
+          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
@@ -102,7 +103,7 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>เมืองอาชญากรนครย่อส่วนฟูลเฮาส์</h6>
           <div className="text-end text-danger">1,100 ราคา
           </div>
-          <a href="#" className="btn btn-primary">หยิบใส่ตะกร้า</a>
+          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
         </div>
       </div>
     </section>
