@@ -16,7 +16,7 @@ export default function Navbar() {
   <link rel="stylesheet" href="Project_01.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <header>
-    <nav className="navbar navbar-expand-lg ">
+    <nav className="navbar navbar-expand-lg "  style={{backgroundColor: '#5B785B'}}>
       <div className="container-fluid">
         <Link to="/home" href="Project_01.html"><img src={Logo_YADA} alt="..." width={120} /></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
