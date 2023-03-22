@@ -1,0 +1,95 @@
+body{
+    font-family: Tahoma;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0,0,0,.1);
+}
+
+footer{
+    background-color: #5B785B;
+}
+
+header{
+    font-size: 20px;
+    background-color: #5B785B;
+}
+
+.slide{
+    max-width: 800px;
+    max-height: 400px;
+    margin: auto auto;
+
+}   
+
+.img_rsponsive {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+        max-height: 400px;
+        margin: 20px auto;
+}
+
+.item-price{
+    text-align: right;
+    color: red;
+}
+
+main{
+    margin-top: 10px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 80px; 
+
+}
+.card {margin-top: 20px;
+
+}
+
+@media screen and (max-width: 990px) {
+    #wrapper {
+        width: 100%;
+        min-width: 800px;
+        padding: 0;
+    }   
+    aside a {
+        display: inline-block;
+        padding: 8px 5px;
+    }  
+    aside {
+        display: none;
+    }
+    .img_rsponsive {
+        padding: 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 991px) {
+    #wrapper {
+        width: 80%;
+        padding: 10px;
+    }   
+    aside {
+        float: left;
+        min-width: 200px;
+        max-width: 200px;
+        background: #ccc;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    aside a {
+        display: block;
+        padding: 8px 5px;
+    }
+    main {
+        float: left;
+    }
+}
