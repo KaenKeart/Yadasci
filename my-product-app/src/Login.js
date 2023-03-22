@@ -29,7 +29,7 @@ export default function Login() {
 
     const getAuthenToken = async () => {
         const response = await fetch(
-            "http://localhost:8080/api/authen_request",
+            "http://localhost:8000/api/authen_request",
             {
                 method: "POST",
                 headers: {
@@ -53,7 +53,7 @@ export default function Login() {
         var authenSignature = md5(baseString);
 
         const response = await fetch(
-            "http://localhost:8080/api/access_request",
+            "http://localhost:8000/api/access_request",
             {
                 method: "POST",
                 headers: {

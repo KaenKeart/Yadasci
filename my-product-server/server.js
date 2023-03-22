@@ -6,7 +6,7 @@ const multer = require("multer");
 const path = require('path');
 const Product = require("./libs/Product");
 const app = express();
-const post = 8080;
+const post = 8000;
 
 const bodyParser = require('body-parser');
 

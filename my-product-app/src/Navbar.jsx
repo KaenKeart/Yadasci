@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom'
 import Logo_YADA from '../src/img/Logo_YADA.png'
-
+import styles from './dropdownmenu.css';
 
 export default function Navbar() {
     
@@ -28,7 +28,7 @@ export default function Navbar() {
               <Link to="/home" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li> 
             <MDBDropdown>
-      <MDBDropdownToggle tag='a' className='btn btn-#5B785B'> 
+      <MDBDropdownToggle tag='a' className={styles.dropdownitem}> 
         บอร์ดเกม
       </MDBDropdownToggle>
       <MDBDropdownMenu>
