@@ -1,9 +1,13 @@
 import Logo_YADA from '../src/img/Logo_YADA.png'
-import Game21 from '../src/img/game_21.jpg'
+import Game01 from '../src/img/Game01.PNG'
+import Game02 from '../src/img/Game02.png'
+import Game03 from '../src/img/Game03.png'
+import Game04 from '../src/img/Game04.png'
 import Game11 from '../src/img/game_11.jpg'
+import Game21 from '../src/img/game_21.jpg'
 import Game24 from '../src/img/game_24.jpg'
 
-function Test() {
+function Project() {
 
     return (
         <div>
@@ -38,7 +42,7 @@ function Test() {
                 <li><a className="dropdown-item" href="Page03.html">ภาคเสริม</a></li>
               </ul>
             </li><li className="nav-item">
-              <a className="nav-link" href="Page04.html">เกมยอดนิยม</a>
+              <a className="nav-link" href="Page04.jsx">เกมยอดนิยม</a>
             </li>
           </ul>
           <div className="form-floating mb-3">
@@ -64,16 +68,16 @@ function Test() {
     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="img/Game01.png" width={800} className="img_rsponsive" height={400} />
+          <img src={Game01} width={800} className="img_rsponsive" height={400} />
         </div>
         <div className="carousel-item">
-          <img src="img/Game02.png" width={800} className="img_rsponsive" height={400} />
+          <img src={Game02} width={800} className="img_rsponsive" height={400} />
         </div>
         <div className="carousel-item">
-          <img src="img/Game03.png" width={800} className="img_rsponsive" height={400} />
+          <img src={Game03} width={800} className="img_rsponsive" height={400} />
         </div>
         <div className="carousel-item">
-          <img src="img/Game04.png" width={800} className="img_rsponsive" height={400} />
+          <img src={Game04} width={800} className="img_rsponsive" height={400} />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -190,4 +194,4 @@ function Test() {
 
     )
 }
-export default Test;
+export default Project;
