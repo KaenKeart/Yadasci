@@ -88,8 +88,6 @@ export default function Login() {
         localStorage.setItem("first_name",data2.data.account_info.first_name);
         localStorage.setItem("last_name",data2.data.account_info.last_name);
         localStorage.setItem("email",data2.data.account_info.email);
-        localStorage.setItem("role_id",data2.data.account_info.role_id);
-        localStorage.setItem("role_name",data2.data.account_info.role_name);
 
         Navigate("home", {replace: false });
 
