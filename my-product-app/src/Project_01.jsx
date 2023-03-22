@@ -6,6 +6,8 @@ import Game04 from '../src/img/Game04.png'
 import Game11 from '../src/img/game_11.jpg'
 import Game21 from '../src/img/game_21.jpg'
 import Game24 from '../src/img/game_24.jpg'
+import Dropdown from './Dropdown'
+import { Link } from 'react-router-dom'
 
 function Project() {
 
@@ -28,21 +30,14 @@ function Project() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="Project_01.html">หน้าหลัก</a>
+              <Link to="/" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 บอร์ดเกม
               </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="Page01.html">บอร์ดเกมเก่า</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="Page02.html">บอร์ดเกมเด็ก</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="Page03.html">ภาคเสริม</a></li>
-              </ul>
-            </li><li className="nav-item">
-              <a className="nav-link" href="Page04.jsx">เกมยอดนิยม</a>
+              <Dropdown/> 
+              <Link to="/test" className="nav-link" >เกมยอดนิยม</Link>
             </li>
           </ul>
           <div className="form-floating mb-3">
