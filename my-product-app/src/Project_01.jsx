@@ -30,15 +30,10 @@ function Project() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
+              <Link to="/home" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                บอร์ดเกม
-              </a>
               <Dropdown/> 
-              <Link to="/test" className="nav-link" >เกมยอดนิยม</Link>
-            </li>
+              <Link to="/page01" className="nav-link" >เกมยอดนิยม</Link>
           </ul>
           <div className="form-floating mb-3">
             <input className="form-control" id="floatingInput" placeholder=" " />
