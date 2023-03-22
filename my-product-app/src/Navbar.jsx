@@ -18,7 +18,7 @@ export default function Navbar() {
   <header>
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <a href="Project_01.html"><img src={Logo_YADA} width={120} /></a>
+        <Link to="/home" href="Project_01.html"><img src={Logo_YADA} alt="..." width={120} /></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -32,12 +32,12 @@ export default function Navbar() {
         บอร์ดเกม
       </MDBDropdownToggle>
       <MDBDropdownMenu>
-        <MDBDropdownItem link>บอร์ดเกมเก่า</MDBDropdownItem>
-        <MDBDropdownItem link>บอร์ดเกมเด็ก</MDBDropdownItem>
-        <MDBDropdownItem link>ภาคเสริม</MDBDropdownItem>
+        <Link to="/page01"><MDBDropdownItem link >บอร์ดเกมเก่า</MDBDropdownItem></Link>
+        <Link to="/page02"><MDBDropdownItem link >บอร์ดเกมเด็ก</MDBDropdownItem></Link> 
+        <Link to="/page03"><MDBDropdownItem link >ภาคเสริม</MDBDropdownItem></Link>  
       </MDBDropdownMenu>
     </MDBDropdown>
-              <Link to="/page01" className="nav-link" >เกมยอดนิยม</Link>
+              <Link to="/page04" className="nav-link" >เกมยอดนิยม</Link>
           </ul>
           <div className="form-floating mb-3">
             <input className="form-control" id="floatingInput" placeholder=" " />
