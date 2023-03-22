@@ -8,7 +8,7 @@ import Project from "./Project_01";
 function Router () {
     return (
         <Routes>
-        <Route path="/home" element={<Project />} />
+        {/* <Route path="/Project" element={<Project />} /> */}
         <Route path="/page01" element={<Page01 />} />
         <Route path="/page02" element={<Page02 />} />
         <Route path="/page03" element={<Page03 />} />
