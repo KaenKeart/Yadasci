@@ -17,7 +17,6 @@ function Page04() {
 
 <div>
             <Navbar/>
-
   <br /><h1 id="section"><span style={{color: '#000000'}}> บอร์ดเกม</span>
     <span style={{color: '#5B785B'}}>ยอดนิยม</span>
   </h1>
