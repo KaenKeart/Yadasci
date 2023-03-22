@@ -7,7 +7,9 @@ function Game01() {
 
 <div>
     <Navbar/>
+    <br/>
     <h1>game</h1>   
+    
     <Footer/>
 </div>      
 

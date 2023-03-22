@@ -1,3 +1,4 @@
+import { Carousel } from 'react-bootstrap'
 import Game01 from '../src/img/Game01.PNG'
 import Game02 from '../src/img/Game02.png'
 import Game03 from '../src/img/Game03.png'
@@ -7,39 +8,28 @@ import Game21 from '../src/img/game_21.jpg'
 import Game24 from '../src/img/game_24.jpg'
 import Footer from './footer'
 import Navbar from './Navbar'
-import styles from './Project_01.css'
 
 function Project() {
 
     return (
         <div>
           <Navbar/> 
-  <div id="slide">
-    <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src={Game01} width={800} className="img_rsponsive" height={400} />
-        </div>
-        <div className="carousel-item">
-          <img src={Game02} width={800} className="img_rsponsive" height={400} />
-        </div>
-        <div className="carousel-item">
-          <img src={Game03} width={800} className="img_rsponsive" height={400} />
-        </div>
-        <div className="carousel-item">
-          <img src={Game04} width={800} className="img_rsponsive" height={400} />
-        </div>
-      </div>
-      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
+
+          <Carousel >
+      <Carousel.Item interval={1000}>
+                  <img src={Game01} width={800} className="img_responsive" alt="..." height={400} />
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+                  <img src={Game02} width={800} className="img_responsive" alt="..." height={400} />
+      </Carousel.Item>
+      <Carousel.Item>
+                  <img src={Game03} width={800} className="img_responsive" alt="..." height={400} />
+      </Carousel.Item>
+      <Carousel.Item>
+                  <img src={Game04} width={800} className="img_responsive" alt="..." height={400} />
+      </Carousel.Item>
+    </Carousel>
+
   <br />
   <br />
   <h1 className="text-center"><span style={{color: '#000000'}}><svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-stars" viewBox="0 0 16 16">
