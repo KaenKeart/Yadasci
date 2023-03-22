@@ -3,6 +3,7 @@ import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from
 import { Link } from 'react-router-dom'
 import Logo_YADA from '../src/img/Logo_YADA.png'
 import styles from './dropdownmenu.css';
+import { Dropdown } from 'react-bootstrap';
 
 export default function Navbar() {
     
@@ -27,11 +28,26 @@ export default function Navbar() {
             <li className="nav-item"> 
               <Link to="/home" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li> 
+            <Dropdown >
+      <Dropdown.Toggle variant="#5B785B" id="dropdown-basic">
+        หน้าหมี
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
+        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
+        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
+        
+      </Dropdown.Menu>
+    </Dropdown>
             <MDBDropdown>
-      <MDBDropdownToggle tag='a' className={styles.dropdownitem}> 
+      <MDBDropdownToggle tag='a' className="btn btn-#5B785B"> 
         บอร์ดเกม
       </MDBDropdownToggle>
-      <MDBDropdownMenu>
+      <MDBDropdownMenu> 
         <Link to="/page01"><MDBDropdownItem link >บอร์ดเกมเก่า</MDBDropdownItem></Link>
         <Link to="/page02"><MDBDropdownItem link >บอร์ดเกมเด็ก</MDBDropdownItem></Link> 
         <Link to="/page03"><MDBDropdownItem link >ภาคเสริม</MDBDropdownItem></Link>  
