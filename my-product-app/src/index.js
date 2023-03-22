@@ -15,6 +15,7 @@ import Page01 from './Page01';
 import Page02 from './Page02';
 import Page03 from './Page03';
 import Page04 from './Page04';
+import Game01 from './game_01';
 //import Home from './Home';
 
 
@@ -28,6 +29,8 @@ root.render(
       <Route path="/page02" element={<Page02 />} />
       <Route path="/page03" element={<Page03 />} />
       <Route path="/page04" element={<Page04 />} />
+      <Route path="/game_01" element={<Game01 />} />
+
 
     </Routes>
   </BrowserRouter>,

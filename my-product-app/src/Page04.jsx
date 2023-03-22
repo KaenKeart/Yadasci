@@ -11,7 +11,7 @@ import game_18 from '../src/img/game_18.jpg'
 import game_19 from '../src/img/game_19.jpg'
 import game_20 from '../src/img/game_20.jpg'
 
-function Page02() {
+function Page04() {
 
     return (
 
@@ -24,7 +24,7 @@ function Page02() {
   <main>
     <section>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_01.jsx"><img src={game_01} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_01"><img src={game_01} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส</h6>
           <div className="text-end text-danger">3,650 ราคา
@@ -113,4 +113,4 @@ function Page02() {
 
    )
 }
-export default Page02;
+export default Page04;
