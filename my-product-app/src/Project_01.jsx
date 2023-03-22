@@ -14,8 +14,8 @@ function Project() {
     return (
         <div>
           <Navbar/> 
-
-          <Carousel >
+          <div id="slide">
+            <Carousel >
       <Carousel.Item interval={1000}>
                   <img src={Game01} width={800} className="img_responsive" alt="..." height={400} />
       </Carousel.Item>
@@ -29,6 +29,7 @@ function Project() {
                   <img src={Game04} width={800} className="img_responsive" alt="..." height={400} />
       </Carousel.Item>
     </Carousel>
+     </div>
 
   <br />
   <br />
