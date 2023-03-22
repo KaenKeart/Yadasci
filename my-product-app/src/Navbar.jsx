@@ -28,31 +28,17 @@ export default function Navbar() {
             <li className="nav-item"> 
               <Link to="/home" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li> 
-            <Dropdown >
-      <Dropdown.Toggle variant="#5B785B" id="dropdown-basic">
-        หน้าหมี
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
-        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
-        <Link to="/page01"><Dropdown.Item>บอร์ดเกมเก่า</Dropdown.Item></Link>
-        
-      </Dropdown.Menu>
-    </Dropdown>
             <MDBDropdown>
-      <MDBDropdownToggle tag='a' className="btn btn-#5B785B"> 
+    <MDBDropdownToggle tag='a' className="btn btn-#5B785B" style={{fontSize: "20px"}}> 
         บอร์ดเกม
-      </MDBDropdownToggle>
-      <MDBDropdownMenu> 
-        <Link to="/page01"><MDBDropdownItem link >บอร์ดเกมเก่า</MDBDropdownItem></Link>
-        <Link to="/page02"><MDBDropdownItem link >บอร์ดเกมเด็ก</MDBDropdownItem></Link> 
-        <Link to="/page03"><MDBDropdownItem link >ภาคเสริม</MDBDropdownItem></Link>  
-      </MDBDropdownMenu>
-    </MDBDropdown>
+    </MDBDropdownToggle>
+    <MDBDropdownMenu> 
+        <Link to="/page01"><MDBDropdownItem link style={{fontSize: "14px"}}>บอร์ดเกมเก่า</MDBDropdownItem></Link>
+        <Link to="/page02"><MDBDropdownItem link style={{fontSize: "14px"}}>บอร์ดเกมเด็ก</MDBDropdownItem></Link> 
+        <Link to="/page03"><MDBDropdownItem link style={{fontSize: "14px"}}>ภาคเสริม</MDBDropdownItem></Link>  
+    </MDBDropdownMenu>
+</MDBDropdown>
+
               <Link to="/page04" className="nav-link" >เกมยอดนิยม</Link>
           </ul>
           <div className="form-floating mb-3">
