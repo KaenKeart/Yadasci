@@ -39,7 +39,7 @@ export default function Navbar() {
     <MDBDropdownMenu> 
         <Link to={"/product/add"} ><MDBDropdownItem link style={{fontSize: "14px"}}>เพิ่มสินค้า</MDBDropdownItem></Link>
         <Link to={"/report"}><MDBDropdownItem link style={{fontSize: "14px"}}>รายงาน</MDBDropdownItem></Link> 
-        <Link to={"/report"}><MDBDropdownItem link style={{fontSize: "14px"}}>คลังสินค้า</MDBDropdownItem></Link> 
+        <Link to={"/stock"}><MDBDropdownItem link style={{fontSize: "14px"}}>คลังสินค้า</MDBDropdownItem></Link> 
 
 
     </MDBDropdownMenu>

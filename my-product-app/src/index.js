@@ -17,6 +17,7 @@ import Game01 from './game_01';
 //import Home from './Home';
 import ProductDetail from './ProductDetail';
 import Report from './Report';
+import Stock from './Stock';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,6 +33,7 @@ root.render(
       <Route path="/game_01" element={<Game01 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
       <Route path="report" element={<Report />} />
+      <Route path="stock" element={<Stock />} />
 
 
     </Routes>

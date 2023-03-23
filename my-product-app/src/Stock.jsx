@@ -8,6 +8,7 @@ function Stock() {
 
 <div>
             <Navbar/>
+  <h1>คลังสินค้า</h1>
   
     <Footer/>
 
