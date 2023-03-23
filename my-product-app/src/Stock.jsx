@@ -1,7 +1,7 @@
 import Footer from './footer';
 import Navbar from './Navbar';
 import { API_GET, API_POST } from "./api";
-import Productitem from "./Productitem";
+import ProductItem from "./Productitem";
 import { useEffect, useState } from "react";
 
 
@@ -74,7 +74,7 @@ function Stock() {
     <div className="container mt-3">
                     {
                         products.map(item => (
-                            <Productitem 
+                            <ProductItem 
                             key={item.product_id}
                             data={item} 
                             onDelete={onDelete}/>
