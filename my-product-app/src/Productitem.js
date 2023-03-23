@@ -9,7 +9,7 @@ export default function ProductItem(props) {
     return (
         <div className="row border rounded shadow-sm mt-3">
             <div className="col-3">
-                <img src={`http://localhost:8080/images/${props.data.image_url}`} width={100}/>
+                <img src={`http://localhost:8000/images/${props.data.image_url}`} width={100}/>
             </div>
             <div className="col-7">
                 <h5 className="text-rpimary">{props.data.product_name}</h5>
