@@ -129,7 +129,7 @@ export default function Login() {
                     <Col md={3}>
                         <Button type="submit">Login</Button>
                     </Col>
-                </Row>
+                </Row>  
             </Form>
         </div>
         

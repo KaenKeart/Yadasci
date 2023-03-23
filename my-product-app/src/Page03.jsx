@@ -3,7 +3,7 @@ import Footer from './footer';
 import Navbar from './Navbar';
 import game_08 from '../src/img/game_08.jpg'
 import game_09 from '../src/img/game_09.jpg'
-import game_10 from '../src/img/game_12.jpg'
+import game_10 from '../src/img/game_10.jpg'
 import game_12 from '../src/img/game_12.jpg'
 
 function Page03() {
