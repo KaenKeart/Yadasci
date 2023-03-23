@@ -37,8 +37,10 @@ export default function Navbar() {
         เพิ่มเติม
     </MDBDropdownToggle>
     <MDBDropdownMenu> 
-        <Link to={"/product/add"} ><MDBDropdownItem link style={{fontSize: "14px"}}>เพิ่ม</MDBDropdownItem></Link>
+        <Link to={"/product/add"} ><MDBDropdownItem link style={{fontSize: "14px"}}>เพิ่มสินค้า</MDBDropdownItem></Link>
         <Link to={"/report"}><MDBDropdownItem link style={{fontSize: "14px"}}>รายงาน</MDBDropdownItem></Link> 
+        <Link to={"/report"}><MDBDropdownItem link style={{fontSize: "14px"}}>คลังสินค้า</MDBDropdownItem></Link> 
+
 
     </MDBDropdownMenu>
 </MDBDropdown>
@@ -58,7 +60,7 @@ export default function Navbar() {
                                   0 2.9419 2.9418
                                   2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" /></svg><span>
                   Search</span></span></label>
-                    
+                  
           </div>
         </div>
       </div>
