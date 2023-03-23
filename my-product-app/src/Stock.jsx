@@ -9,6 +9,8 @@ function Stock() {
     const [productTypes, setProductTypes] = useState([]);
     const [productTypeId, setProductTypeId] = useState(0);
     const [products, setProducts] = useState([]);
+    const [shouldShowDeleteButton, setShouldShowDeleteButton] = useState(true);
+    const [shouldShowEditButton, setShouldShowEditbutton] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
@@ -72,15 +74,12 @@ function Stock() {
 <div>
     <Navbar/>
     <div className="container mt-3">
-                    {
-                        products.map(item => (
-                            <ProductItem 
-                            key={item.product_id}
-                            data={item} 
-                            onDelete={onDelete}/>
-                        ))
-                    }
-                </div>
+    {products.map(item => (
+        <ProductItem key={item.product_id} data={item} onDelete={onDelete} showButtons={true} />
+
+    ))}
+</div>
+
     <Footer/>
 
 
