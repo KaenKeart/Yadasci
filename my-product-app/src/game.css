@@ -1,0 +1,24 @@
+#slide_game{
+    max-width: 400px;
+    max-height: 400px;
+    margin: 20px auto 20px 50px;    
+}
+
+#content {
+
+  padding: 20px; /* กำหนดค่า Padding เป็น 20px */
+}
+
+#basket {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  
+}
+
+form.cart {
+  width: 400px;
+  height: 400px;    
+}
+
+
