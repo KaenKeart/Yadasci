@@ -4,10 +4,6 @@ import Game01 from '../src/img/Game01.PNG'
 import Game02 from '../src/img/Game02.png'
 import Game03 from '../src/img/Game03.png'
 import Game04 from '../src/img/Game04.png'
-import Game11 from '../src/img/game_11.jpg'
-import Game21 from '../src/img/game_21.jpg'
-import Game24 from '../src/img/game_24.jpg'
-import FavCart from './FavCart'
 import Footer from './footer'
 import Navbar from './Navbar'
 import style from './Project_01.css'
@@ -146,7 +142,7 @@ function Project() {
   <main>
   <div className="container mt-3">
     {
-        products.filter(item => [22, 22, 23].includes(item.product_id))
+        products.filter(item => [22, 23, 24].includes(item.product_id))
         .map(item => (
             <ProductItem 
                 key={item.product_id}
@@ -156,47 +152,14 @@ function Project() {
         ))
     }
 </div>
-    
-    <section>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_21.html"><img src={Game21} className="card-img-top" alt="..." width={250} height={250} /></a>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เกาะภูตพิทักษ์</h6>
-          <div className="text-end text-danger">2,995 ราคา
-          </div>
-          <FavCart/>
-
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_11.html"><img src={Game11} className="card-img-top" alt="..." width={250} height={250} /></a>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส ถนนลี้ลับแห่งอาร์คัม</h6>
-          <div className="text-end text-danger">2,650 ราคา
-          </div>
-          <FavCart/>
-
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <a href="game_24.html"><img src={Game24} className="card-img-top" alt="..." width={250} height={250} /></a>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เมืองอาชญากรนครย่อส่วนฟูลเฮาส์</h6>
-          <div className="text-end text-danger">1,100 ราคา
-          </div>
-          <FavCart/>
-        </div>
-      </div>
-    </section>
   </main>
-  <div className="toast-container position-fixed bottom-0 end-0
-          p-3">
+<div className="toast-container position-fixed bottom-0 end-0 p-5">
     <div className="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
       <div className="toast-header">
         <svg className="bd-placeholder-img rounded me-2" width={20} height={20} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid
                       slice" focusable="false"><rect width="100%" height="100%" fill="#5B785B" /></svg>
         <strong className="me-auto">YADA</strong>
-        <small className="text-muted">just now</small>
+        <small className="text-muted">just now</small>      
       </div>
       <div className="toast-body">
         Welcome to YADASCI Board Game
