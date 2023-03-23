@@ -1,35 +1,36 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function Cart() {
-  const [items, setItems] = useState([]);
+  const [products, setProducts] = useState([
+    { id: 1, name: 'Product A', price: 100 },
+    { id: 2, name: 'Product B', price: 200 },
+    { id: 3, name: 'Product C', price: 300 }
+  ]);
+  const [cart, setCart] = useState([]);
 
-  const addItem = (item) => {
-    setItems([...items, item]);
-  };
-
-  const removeItem = (index) => {
-    const newItems = [...items];
-    newItems.splice(index, 1);
-    setItems(newItems);
-  };
-
-  const total = items.reduce((acc, curr) => acc + curr.price, 0);
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  }
 
   return (
     <div>
-      <h1>Shopping Cart</h1>
+      <h1>Product List</h1>
       <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            <span>{item.name}</span>
-            <button onClick={() => removeItem(index)}>Remove</button>
+        {products.map((product) => (
+          <li key={product.id}>
+            {product.name} - {product.price} baht
+            <button onClick={() => addToCart(product)}>Add to cart</button>
           </li>
         ))}
       </ul>
-      <p>Total: {total}</p>
-      <button onClick={() => addItem({ name: "Item", price: 10 })}>
-        Add Item
-      </button>
+      <h2>Cart</h2>
+      <ul>
+        {cart.map((product) => (
+          <li key={product.id}>
+            {product.name} - {product.price} baht
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
