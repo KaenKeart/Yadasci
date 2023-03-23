@@ -40,6 +40,9 @@ export default function Navbar() {
 </MDBDropdown>
 
               <Link to="/page04" className="nav-link" >เกมยอดนิยม</Link>
+              <Link to={"/product/add"} className="btn btn-outline-primary me-3">เพิ่ม</Link>
+                
+              <Link to={"/report"} className="btn btn-outline-primary me-3">รายงาน</Link>
           </ul>
           <div className="form-floating mb-3">
             <input className="form-control" id="floatingInput" placeholder=" " />

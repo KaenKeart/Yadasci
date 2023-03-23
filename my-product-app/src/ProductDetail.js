@@ -21,7 +21,7 @@ export default function ProductDetail() {
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
-                "http://localhost:8080/api/product_types",
+                "http://localhost:8000/api/product_types",
                 {
                     method: "GET",
                     headers: {
@@ -113,7 +113,7 @@ export default function ProductDetail() {
 
     const doCreateProduct = async () => {
         const response = await fetch(
-            "http://localhost:8080/api/product/add",
+            "http://localhost:8000/api/product/add",
             {
                 method: "POST",
                 headers: {
