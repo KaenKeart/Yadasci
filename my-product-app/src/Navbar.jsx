@@ -15,6 +15,7 @@ export default function Navbar() {
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
   <link rel="stylesheet" href="Project_01.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+  
   <header>
     <nav className="navbar navbar-expand-lg "  style={{backgroundColor: '#5B785B'}}>
       <div className="container-fluid">
@@ -57,12 +58,14 @@ export default function Navbar() {
                                   0 2.9419 2.9418
                                   2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round" /></svg><span>
                   Search</span></span></label>
+                    
           </div>
         </div>
       </div>
     </nav>
   </header>
 </div>
+
 
   );
 }
