@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import game_01 from '../src/img/game_01.jpg'
 import game_01_2 from '../src/img/game_01-2.jpg'
 import './game.css';
+import Comment from './comment';
 
 
 
@@ -60,24 +61,7 @@ function Game01() {
                         </form>
       </section>
 
-<div style={{ padding: "20px" }}>
-  <textarea
-    placeholder="แกน"
-    defaultValue={""}
-    style={{
-      margin: "20px",
-      width: "300px",
-      height: "200px",
-      backgroundColor: "#F5F5F5",
-      color: "#333"
-    }}
-  />
-</div>
-
-
-
-
-    
+    <Comment/>
     <Footer/>
 </div>      
 

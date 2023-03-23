@@ -62,11 +62,10 @@ export default function Report() {
                     {
                         label: "จำนวนสินค้าแยกตามประเภทสินค้า",
                         data: data,
-                        backgroundColor: "rgba(255, 99, 132, 0.5)"
+                        backgroundColor: "#5B785B"
                     }
                 ]
             }
-
             setChartData(dataset);
             setIsloading(true);
         }

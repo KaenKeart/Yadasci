@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css';
 import { useState } from 'react';
 import { Form , Row, Col ,Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './Box.css';
 
 var md5 = require("md5");
 

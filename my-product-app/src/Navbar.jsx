@@ -27,21 +27,21 @@ export default function Navbar() {
             <li className="nav-item"> 
               <Link to="/home" className="nav-link active" aria-current="page" >หน้าหลัก</Link>
             </li> 
-            <MDBDropdown>
+              <Link to="/page01" className="nav-link" >บอร์ดเกมเก่า</Link>
+              <Link to="/page02" className="nav-link" >บอร์ดเกมเด็ก</Link>
+              <Link to="/page03" className="nav-link" >ภาคเสริม</Link>
+              <Link to="/page04" className="nav-link" >เกมยอดนิยม</Link>
+              <MDBDropdown>
     <MDBDropdownToggle tag='a' className="btn btn-#5B785B" style={{fontSize: "20px"}}> 
-        บอร์ดเกม
+        เพิ่มเติม
     </MDBDropdownToggle>
     <MDBDropdownMenu> 
-        <Link to="/page01"><MDBDropdownItem link style={{fontSize: "14px"}}>บอร์ดเกมเก่า</MDBDropdownItem></Link>
-        <Link to="/page02"><MDBDropdownItem link style={{fontSize: "14px"}}>บอร์ดเกมเด็ก</MDBDropdownItem></Link> 
-        <Link to="/page03"><MDBDropdownItem link style={{fontSize: "14px"}}>ภาคเสริม</MDBDropdownItem></Link>  
+        <Link to={"/product/add"} ><MDBDropdownItem link style={{fontSize: "14px"}}>เพิ่ม</MDBDropdownItem></Link>
+        <Link to={"/report"}><MDBDropdownItem link style={{fontSize: "14px"}}>รายงาน</MDBDropdownItem></Link> 
+
     </MDBDropdownMenu>
 </MDBDropdown>
 
-              <Link to="/page04" className="nav-link" >เกมยอดนิยม</Link>
-              <Link to={"/product/add"} className="btn btn-outline-primary me-3">เพิ่ม</Link>
-                
-              <Link to={"/report"} className="btn btn-outline-primary me-3">รายงาน</Link>
           </ul>
           <div className="form-floating mb-3">
             <input className="form-control" id="floatingInput" placeholder=" " />

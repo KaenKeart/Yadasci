@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { SERVER_URL } from "./app.config";
+    
+
 
 export default function ProductDetail() {
     let params = useParams();
@@ -174,85 +176,85 @@ export default function ProductDetail() {
                     : <></>
             }
 
-            <div className="container m-auto">
-                <Form noValidate validated={validated} onSubmit={onSave}>
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="validateProductName">
-                            <Form.Label>ชื่อสินค้า</Form.Label>
-                            <Form.Control
-                                required
-                                type="text"
-                                value={productName}
-                                placeholder="ชื่อสินค้า"
-                                onChange={(e) => setProductName(e.target.value)}
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                กรุณากรอก ชื่อสินค้า
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
+            <div id="ProductDetail" className="container m-auto">
+                    <Form noValidate validated={validated} onSubmit={onSave}>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="validateProductName">
+                                <Form.Label>ชื่อสินค้า</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="text"
+                                    value={productName}
+                                    placeholder="ชื่อสินค้า"
+                                    onChange={(e) => setProductName(e.target.value)}
+                                />
+                                <Form.Control.Feedback type="invalid">
+                                    กรุณากรอก ชื่อสินค้า
+                                </Form.Control.Feedback>
+                            </Form.Group>
+                        </Row>
 
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="validateProductName">
-                            <Form.Label>ประเภทสินค้า</Form.Label>
-                            <Form.Select
-                                value={productTypeId}
-                                onChange={(e) => setProductTypeId(e.target.value)}
-                                required>
-                                <option label="กรุณาเลือกประเภทสินค้า"></option>
-                                {
-                                    productTypes.map(item => (
-                                        <option
-                                            key={item.product_type_id}
-                                            value={item.product_type_id}>{item.product_type_name}</option>
-                                    ))
-                                }
-                            </Form.Select>
-                            <Form.Control.Feedback type="invalid">
-                                กรุณากรอก ประเภทสินค้า
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="validateProductName">
+                                <Form.Label>ประเภทสินค้า</Form.Label>
+                                <Form.Select
+                                    value={productTypeId}
+                                    onChange={(e) => setProductTypeId(e.target.value)}
+                                    required>
+                                    <option label="กรุณาเลือกประเภทสินค้า"></option>
+                                    {
+                                        productTypes.map(item => (
+                                            <option
+                                                key={item.product_type_id}
+                                                value={item.product_type_id}>{item.product_type_name}</option>
+                                        ))
+                                    }
+                                </Form.Select>
+                                <Form.Control.Feedback type="invalid">
+                                    กรุณากรอก ประเภทสินค้า
+                                </Form.Control.Feedback>
+                            </Form.Group>
+                        </Row>
 
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="validateProductName">
-                            <Form.Label>ราคาสินค้า</Form.Label>
-                            <Form.Control
-                                required
-                                type="number"
-                                value={price}
-                                min={0}
-                                placeholder="ราคาสินค้า"
-                                onChange={(e) => setPrice(e.target.value)}
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                กรุณากรอก ราคาสินค้า
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="validateProductName">
+                                <Form.Label>ราคาสินค้า</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="number"
+                                    value={price}
+                                    min={0}
+                                    placeholder="ราคาสินค้า"
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
+                                <Form.Control.Feedback type="invalid">
+                                    กรุณากรอก ราคาสินค้า
+                                </Form.Control.Feedback>
+                            </Form.Group>
+                        </Row>
 
-                    <Row className="mb-3">
-                        <Form.Group as={Col} controlId="validateProductName">
-                            <Form.Label>จำนวนสินค้า</Form.Label>
-                            <Form.Control
-                                required
-                                type="number"
-                                value={stock}
-                                min={0}
-                                placeholder="ราคาสินค้า"
-                                onChange={(e) => setStock(e.target.value)}
-                            />
-                            <Form.Control.Feedback type="invalid">
-                                กรุณากรอก จำนวนสินค้า
-                            </Form.Control.Feedback>
-                        </Form.Group>
-                    </Row>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} controlId="validateProductName">
+                                <Form.Label>จำนวนสินค้า</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="number"
+                                    value={stock}
+                                    min={0}
+                                    placeholder="ราคาสินค้า"
+                                    onChange={(e) => setStock(e.target.value)}
+                                />
+                                <Form.Control.Feedback type="invalid">
+                                    กรุณากรอก จำนวนสินค้า
+                                </Form.Control.Feedback>
+                            </Form.Group>
+                        </Row>
 
-                    <Row className="mb-3">
-                        <Button variant="primary" as="input" type="submit" value="SAVE" />
-                    </Row>
-                </Form>
-            </div>
+                        <Row className="mb-3">
+                            <Button variant="primary" as="input" type="submit" value="SAVE" />
+                        </Row>
+                    </Form>
+            </div>      
         </>
     );
 }

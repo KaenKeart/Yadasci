@@ -7,6 +7,7 @@ import Game04 from '../src/img/Game04.png'
 import Game11 from '../src/img/game_11.jpg'
 import Game21 from '../src/img/game_21.jpg'
 import Game24 from '../src/img/game_24.jpg'
+import FavCart from './FavCart'
 import Footer from './footer'
 import Navbar from './Navbar'
 import style from './Project_01.css';
@@ -86,7 +87,8 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>เกาะภูตพิทักษ์</h6>
           <div className="text-end text-danger">2,995 ราคา
           </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
+          <FavCart/>
+
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
@@ -95,7 +97,8 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส ถนนลี้ลับแห่งอาร์คัม</h6>
           <div className="text-end text-danger">2,650 ราคา
           </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
+          <FavCart/>
+
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
@@ -104,7 +107,7 @@ function Project() {
           <h6 className="card-title" style={{minHeight: 70}}>เมืองอาชญากรนครย่อส่วนฟูลเฮาส์</h6>
           <div className="text-end text-danger">1,100 ราคา
           </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
+          <FavCart/>
         </div>
       </div>
     </section>

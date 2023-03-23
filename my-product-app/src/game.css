@@ -11,14 +11,14 @@
 
 #basket {
   position: absolute;
-  top: 48%;
-  left: 50%;
+  top: 380px;
+  left: 750px;
   
 }
 
 form.cart {
   width: 400px;
-  height: 400px;    
+  height: auto;    
 }
 
 
