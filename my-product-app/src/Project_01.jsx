@@ -197,7 +197,9 @@ function Project() {
                       slice" focusable="false"><rect width="100%" height="100%" fill="#5B785B" /></svg>
         <strong className="me-auto">YADA</strong>
         <small className="text-muted">just now</small>
+         <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close" />
       </div>
+      
       <div className="toast-body">
         Welcome to YADASCI Board Game
       </div>
