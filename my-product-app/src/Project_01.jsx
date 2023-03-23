@@ -9,6 +9,7 @@ import Game21 from '../src/img/game_21.jpg'
 import Game24 from '../src/img/game_24.jpg'
 import Footer from './footer'
 import Navbar from './Navbar'
+import style from './Project_01.css';
 
 function Project() {
 

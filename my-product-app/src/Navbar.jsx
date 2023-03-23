@@ -2,8 +2,7 @@ import React from 'react';
 import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom'
 import Logo_YADA from '../src/img/Logo_YADA.png'
-import styles from './dropdownmenu.css';
-import { Dropdown } from 'react-bootstrap';
+
 
 export default function Navbar() {
     

@@ -60,13 +60,20 @@ function Game01() {
                         </form>
       </section>
 
-  <div style={{ padding: "20px" }}>
-    <textarea
-      placeholder="แกน"
-      defaultValue={""}
-      style={{ margin: "20px" }}
-    />
-  </div>
+<div style={{ padding: "20px" }}>
+  <textarea
+    placeholder="แกน"
+    defaultValue={""}
+    style={{
+      margin: "20px",
+      width: "300px",
+      height: "200px",
+      backgroundColor: "#F5F5F5",
+      color: "#333"
+    }}
+  />
+</div>
+
 
 
 
