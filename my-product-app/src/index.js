@@ -44,7 +44,7 @@ import Report from './Report';
 import Stock from './Stock';
 import ProductCart from './ProductCart';
 import Register from './Register';
-
+import Comment1 from './Comment1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -59,6 +59,7 @@ root.render(
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
       <Route path="/cart/:productId" element={<ProductCart />} />
+      <Route path="/comment/add/1" element={<Comment1 />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
       <Route path="/game_1" element={<Game01 />} />
