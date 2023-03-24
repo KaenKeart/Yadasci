@@ -49,7 +49,7 @@ export default function Comment1() {
     let json = await response.json();
 
     if (json.result) {
-      window.location = "/home";
+      window.location = "/game_1";
     }
   };
 
