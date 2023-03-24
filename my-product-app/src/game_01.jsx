@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import game_01 from '../src/img/game_01.jpg'
 import game_01_2 from '../src/img/game_01-2.jpg'
 import './game.css';
+import Comment from './Comment';
 
 function Game01() {
 
@@ -82,6 +83,7 @@ function Game01() {
 ซองใส่การ์ด: Light Green Peridot
 ขนาดซอง: 41 x 63 มม. 
 จำนวน:  221 ซอง /  5 แพค</h3>
+<Comment/>
     <Footer/>
 </div>      
 
