@@ -22,8 +22,10 @@ export default function ProductItem(props) {
             
           <h6 className="card-title" style={{minHeight: 70}}>{props.data.product_name}</h6>
                     <div className="text-end text-danger">{props.data.price} ราคา</div>
-          {!props.showButtons && (
+          {!props.showButtons && (<>
+                    <Link to={`/game_${props.data.product_id}`} >Detail</Link>
                     <FavCart />
+                    </>
                 )
           }
           {props.showButtons && (

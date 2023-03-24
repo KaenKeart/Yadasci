@@ -61,15 +61,15 @@ root.render(
       <Route path="/cart/:productId" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
-      <Route path="/game_01" element={<Game01 />} />
-      <Route path="/game_02" element={<Game02 />} />
-      <Route path="/game_03" element={<Game03 />} />
-      <Route path="/game_04" element={<Game04 />} />
-      <Route path="/game_05" element={<Game05 />} />
-      <Route path="/game_06" element={<Game06 />} />
-      <Route path="/game_07" element={<Game07 />} />
-      <Route path="/game_08" element={<Game08 />} />
-      <Route path="/game_09" element={<Game09 />} />
+      <Route path="/game_1" element={<Game01 />} />
+      <Route path="/game_2" element={<Game02 />} />
+      <Route path="/game_3" element={<Game03 />} />
+      <Route path="/game_4" element={<Game04 />} />
+      <Route path="/game_5" element={<Game05 />} />
+      <Route path="/game_6" element={<Game06 />} />
+      <Route path="/game_7" element={<Game07 />} />
+      <Route path="/game_8" element={<Game08 />} />
+      <Route path="/game_9" element={<Game09 />} />
       <Route path="/game_10" element={<Game10 />} />
       <Route path="/game_11" element={<Game11 />} />
       <Route path="/game_12" element={<Game12 />} />
