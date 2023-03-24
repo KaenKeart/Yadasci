@@ -9,6 +9,14 @@ module.exports = {
         return await pool.query(sql);
     },
 
+    createUsers: async (pool, username, password, firstName, lastName, email) => {
+        var sql = "INSERT INTO users (user_name, user_pwd, first_name, last_name, email) "
+                    + "VALUES (?, ?, ?, ?, ?)";
+        sql = mysql.format(sql, [username, password, firstName, lastName, email]);
+
+        return await pool.query(sql);
+    },
+
     getByProductId: async (pool, productId) => {
         var sql = "SELECT * FROM products WHERE product_id = ?";
         sql = mysql.format(sql, [productId]);

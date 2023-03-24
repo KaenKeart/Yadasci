@@ -20,6 +20,7 @@ export default function ProductDetail() {
     const [imageUrl, setImageUrl] = useState("");
     const [selectedFile, setSelectedFile] = useState("");
 
+
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
@@ -59,6 +60,7 @@ export default function ProductDetail() {
         }
     }, [params.productId]);
 
+    
     const onFileSelected = (e) => {
         if (e.target.files.length > 0) {
             setSelectedFile(e.target.files[0]);
@@ -136,6 +138,7 @@ export default function ProductDetail() {
             window.location = "/home";
         }
     }
+
 
     const doUpdateProduct = async () => {
         const json = await API_POST("product/update", {
