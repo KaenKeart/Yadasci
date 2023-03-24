@@ -46,11 +46,6 @@ export default function ProductDetail() {
             let json = await API_GET("product/" + productId);
 
             var data = json.data[0];
-
-            setProductId(data.product_id);
-            setProductName(data.product_name);
-            setProductTypeId(data.product_type_id);
-            setPrice(data.price);
             setStock(data.stock);
             setImageUrl(data.image_url);
         }
@@ -126,9 +121,6 @@ export default function ProductDetail() {
                     Authorization: "Bearer " + localStorage.getItem("access_token")
                 },
                 body: JSON.stringify({
-                    product_name: productName,
-                    product_type_id: productTypeId,
-                    price: price,
                     stock: stock
                 })
             }
@@ -142,10 +134,6 @@ export default function ProductDetail() {
 
     const doUpdateProduct = async () => {
         const json = await API_POST("product/update", {
-            product_id: productId,
-            product_name: productName,
-            product_type_id: productTypeId,
-            price: price,
             stock: stock,
         });
 
