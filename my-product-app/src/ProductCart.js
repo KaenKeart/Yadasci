@@ -7,7 +7,7 @@ import { SERVER_URL } from "./app.config";
     
 
 
-export default function ProductCart() {
+export default function ProductDetail() {
     let params = useParams();
 
     const [productId, setProductId] = useState(0);
@@ -19,6 +19,7 @@ export default function ProductCart() {
     const [validated, setValidated] = useState(false);
     const [imageUrl, setImageUrl] = useState("");
     const [selectedFile, setSelectedFile] = useState("");
+
 
     useEffect(() => {
         async function fetchData() {
@@ -59,6 +60,7 @@ export default function ProductCart() {
         }
     }, [params.productId]);
 
+    
     const onFileSelected = (e) => {
         if (e.target.files.length > 0) {
             setSelectedFile(e.target.files[0]);
@@ -137,6 +139,7 @@ export default function ProductCart() {
         }
     }
 
+
     const doUpdateProduct = async () => {
         const json = await API_POST("product/update", {
             product_id: productId,
@@ -176,8 +179,9 @@ export default function ProductCart() {
                     : <></>
             }
 
-            <div id="ProductCart" className="container m-auto">
+            <div id="ProductDetail" className="container m-auto">
                     <Form noValidate validated={validated} onSubmit={onSave}>
+
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="validateProductName">
                                 <Form.Label>จำนวนสินค้า</Form.Label>
