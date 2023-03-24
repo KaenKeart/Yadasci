@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_02 from "../src/img/game_02.jpg";
 import game_02_1 from "../src/img/game_02-1.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 function Game02() {
   return (
@@ -65,14 +67,9 @@ function Game02() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
 
@@ -83,7 +80,16 @@ function Game02() {
         ซึ่งเราจะต้องจัดสรรทรัพยากรที่เรามี
         และการใช้อิทธิพลเหล่านี้ให้ถูกจังหวะเพื่อชัยชนะ
       </h3>
-      <Link to={`http://localhost:3000/comment/add/2`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
+      <Footer />
       <Footer />
     </div>
   );

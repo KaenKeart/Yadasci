@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_01 from "../src/img/game_01.jpg";
 import game_01_2 from "../src/img/game_01-2.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 
 function Game01() {
@@ -66,14 +68,9 @@ function Game01() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
 
@@ -89,9 +86,16 @@ function Game01() {
         x 120 มม. จำนวน: 8 ซอง / 1 แพค ซองใส่การ์ด: Light Green Peridot ขนาดซอง:
         41 x 63 มม. จำนวน: 221 ซอง / 5 แพค
       </h3>
-      <Link to={`http://localhost:3000/comment/add/1`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
       <Footer />
-      
     </div>
   );
 }

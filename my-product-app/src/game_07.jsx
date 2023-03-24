@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_07 from "../src/img/game_07.jpg";
 import game_07_1 from "../src/img/game_07-1.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 function Game07() {
   return (
@@ -65,17 +67,11 @@ function Game07() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
-
       <h3 id="DetailGame">
         วิธีการเล่น ผู้เล่นเลือกแม่เหล็กไปคนละ 1 ชิ้น
         ผู้เล่นที่อายุน้อยที่สุดเริ่มเล่นเป็นคนแรก
@@ -87,7 +83,15 @@ function Game07() {
         ให้ย้ายไปช่องที่มีเลขกำกับไว้ทันที วิธีจบ
         เป็นคนแรกที่ไปถึงช่องสุดท้ายที่อยู่ด้านบนของกระดาน
       </h3>
-      <Link to={`http://localhost:3000/comment/add/7`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
       <Footer />
     </div>
   );

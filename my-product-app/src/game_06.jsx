@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_06 from "../src/img/game_06.jpg";
 import game_06_1 from "../src/img/game_06-1.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 function Game06() {
   return (
@@ -65,17 +67,11 @@ function Game06() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
-
       <h3 id="DetailGame">
         วิธีการเล่น เตรียมบอร์ดเกม ตำแหน่งเริ่มต้น: แถวแรก: รุค บิช็อป ควีน คิง
         บิช็อป ไนท์ รุค – แถวสอง: พอว์น วิธีเล่น การเดิน:
@@ -98,7 +94,15 @@ function Game06() {
         (เดินตรง ยึดทแยง) วิธีจบ เมื่อฝ่ายใด ฝ่ายนึง “รุกจน” (checkmate)
         คิงฝ่ายตรงข้ามได้ จะชนะ
       </h3>
-      <Link to={`http://localhost:3000/comment/add/6`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
       <Footer />
     </div>
   );

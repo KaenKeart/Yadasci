@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_05 from "../src/img/game_05.jpg";
 import game_05_1 from "../src/img/game_05-1.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 function Game05() {
   return (
@@ -65,24 +67,26 @@ function Game05() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
-
       <h3 id="DetailGame">
         ปีกปักษา เป็นเกมที่ต้องแข่งกันในฐานะผู้ชื่นชอบนกในแขนงต่างๆ
         ไม่ว่าจะเป็นนักวิจัยนก นักดูนก หรือนักสะสมสิ่งต่างๆเกี่ยวกับนก
         ที่จะออกไปตามหานกที่ดีที่สุดในอาณาเขตรักษาพันธุ์ที่เราดูแล
         ซึ่งนกแต่ละชนิดก็จะมีการเชื่อมโยงความสามารถพิเศษ ให้เราได้คะแนนมากขึ้น
       </h3>
-      <Link to={`http://localhost:3000/comment/add/5`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
       <Footer />
     </div>
   );

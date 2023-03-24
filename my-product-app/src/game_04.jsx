@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import game_04 from "../src/img/game_04.jpg";
 import game_04_1 from "../src/img/game_04-1.jpg";
 import "./game.css";
+import "./comment.css";
+
 import { Link } from "react-router-dom";
 function Game04() {
   return (
@@ -65,24 +67,26 @@ function Game04() {
             />
           </div>
 
-          <button
-            type="submit"
-            name="add-to-cart"
-            value={31988}
-            className="single_add_to_cart_button button alt"
-          >
+          <Link id="pick" to="/cart" className="btn btn-primary">
             หยิบใส่ตะกร้า
-          </button>
+          </Link>
         </form>
       </section>
-
       <h3 id="DetailGame">
         เกมล่าปริศนามนุษย์หมาป่า เป็นเกมแนวตัดตัวเลือกระหว่างผู้เล่น 2 ทีม
         คือทีมชาวบ้าน และมนุษย์หมาป่า ฝ่ายชาวบ้านจะไม่รู้ว่าใครเป็นมนุษย์หมาป่า
         และฝั่งหมาป่าต้องพยายามแฝงตัวค่อย ๆ กำจัดฝ่ายชาวบ้านไปทีละคน เพื่อชัยชนะ
         โดยตัวเกมจะมี ผู้ดำเนินเกม (ที่ไม่อยู่ฝ่ายใด) เป็นคนทำหน้าที่ดำเนินเกม
       </h3>
-      <Link to={`http://localhost:3000/comment/add/4`}>Comment</Link>
+      <br />
+      <Link
+        id="comment"
+        to={`http://localhost:3000/comment/add/1`}
+        className="btn btn-primary"
+      >
+        Comment
+      </Link>
+      <br />
       <Footer />
     </div>
   );
