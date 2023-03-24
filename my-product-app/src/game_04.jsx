@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_04 from "../src/img/game_04.jpg";
 import game_04_1 from "../src/img/game_04-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game04() {
   return (
     <div>
@@ -82,6 +82,7 @@ function Game04() {
         และฝั่งหมาป่าต้องพยายามแฝงตัวค่อย ๆ กำจัดฝ่ายชาวบ้านไปทีละคน เพื่อชัยชนะ
         โดยตัวเกมจะมี ผู้ดำเนินเกม (ที่ไม่อยู่ฝ่ายใด) เป็นคนทำหน้าที่ดำเนินเกม
       </h3>
+      <Link to={`http://localhost:3000/comment/add/4`}>Comment</Link>
       <Footer />
     </div>
   );

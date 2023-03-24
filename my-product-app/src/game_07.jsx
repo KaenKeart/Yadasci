@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_07 from "../src/img/game_07.jpg";
 import game_07_1 from "../src/img/game_07-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game07() {
   return (
     <div>
@@ -87,6 +87,7 @@ function Game07() {
         ให้ย้ายไปช่องที่มีเลขกำกับไว้ทันที วิธีจบ
         เป็นคนแรกที่ไปถึงช่องสุดท้ายที่อยู่ด้านบนของกระดาน
       </h3>
+      <Link to={`http://localhost:3000/comment/add/7`}>Comment</Link>
       <Footer />
     </div>
   );

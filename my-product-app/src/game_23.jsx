@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import game_23 from '../src/img/game_23.jpg'
 import game_23_1 from '../src/img/game_23-1.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game23() {
 
     return (
@@ -57,6 +57,7 @@ function Game23() {
       </section>
  
       <h3 id="DetailGame">รายละเอียด ในเกมหนึ่งคืนปริศนาเกมล่ามนุษย์หมาป่า เป็นเกมที่สามารถเล่นได้รวดเร็ว สำหรับผู้เล่น 3-10 คน โดยแต่ละคนจะได้รับบทบาทเป็นคนในหมู่บ้าน ที่จะมีมนุษย์หมาป่าแฝงตัวเข้ามา คนอื่นๆต้องพยายามหามนุษย์หมาป่า เพื่อที่จะกำจัดออกจากหมู่บ้านไป โดยต้องระวังที่จะโหวตผิดคน เพราะถ้าทุกคนจับคนผิดเราทุกคนจะถูกกินและแพ้เกมนี้</h3>
+      <Link to={`http://localhost:3000/comment/add/23`}>Comment</Link>
     <Footer/>
 </div>      
 

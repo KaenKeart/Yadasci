@@ -1,9 +1,9 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { API_GET, API_POST } from "./api";
+import { API_GET } from "./api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { SERVER_URL } from "./app.config";
+
 
 export default function ProductDetail() {
   let params = useParams();

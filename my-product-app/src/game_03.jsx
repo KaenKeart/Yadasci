@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_03 from "../src/img/game_03.jpg";
 import game_03_1 from "../src/img/game_03-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game03() {
   return (
     <div>
@@ -83,6 +83,7 @@ function Game03() {
         ๆ ทิ้งร่องรอยของอารยธรรมไว้ให้ หลงเหลืออยู่ในประวัติศาสตร์
         โดยการสร้างสิ่งปลูกสร้างขนาดมหึมาที่จะยังคงตั้งตระหง่านอยู่คู่กาลเวลา
       </h3>
+      <Link to={`http://localhost:3000/comment/add/3`}>Comment</Link>
       <Footer />
     </div>
   );

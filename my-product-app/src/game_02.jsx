@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_02 from "../src/img/game_02.jpg";
 import game_02_1 from "../src/img/game_02-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game02() {
   return (
     <div>
@@ -83,6 +83,7 @@ function Game02() {
         ซึ่งเราจะต้องจัดสรรทรัพยากรที่เรามี
         และการใช้อิทธิพลเหล่านี้ให้ถูกจังหวะเพื่อชัยชนะ
       </h3>
+      <Link to={`http://localhost:3000/comment/add/2`}>Comment</Link>
       <Footer />
     </div>
   );

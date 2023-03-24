@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import game_16 from '../src/img/game_16.jpg'
 import game_16_1 from '../src/img/game_16-1.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game16() {
 
     return (
@@ -57,6 +57,7 @@ function Game16() {
       </section>
  
       <h3 id="DetailGame">รายละเอียด ผู้ชายวัยรุ่นส่วนใหญ่ต่างหมายครอบครองเจ้าหญิงอันสิริงดงาม แต่เธอกลับขังตัวอยู่ในปราสาท เราจึงต้องพยายามให้คนอื่นๆในวังช่วยส่งจดหมายรักของเราไปถึงมือเธอให้จงได้ ก่อนที่จะถูกจับ หรือมีคนอื่นส่งตัดหน้าไปซะก่อ</h3>
+      <Link to={`http://localhost:3000/comment/add/16`}>Comment</Link>
     <Footer/>
 </div>      
 

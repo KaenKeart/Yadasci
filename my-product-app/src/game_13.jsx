@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import game_13 from '../src/img/game_13.jpg'
 import game_13_1 from '../src/img/game_13-1.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game13() {
 
     return (
@@ -57,6 +57,7 @@ function Game13() {
       </section>
  
       <h3 id="DetailGame">รายละเอียด เป็นบอร์ดเกมที่สายต่อสู้ต้องโดน จะเล่นเกมนี้ ไม่ต้องคิดวางแผนให้ปวดหัว บวกไปเลย เลือกสัตว์ประหลาด ทอยเต๋าให้ดี แล้วเลือกระหว่างเก็บพลังงานเพื่อแลกการ์ดเพิ่มสกิลพิเศษ เพิ่มเลือดให้ตัวเองไม่ให้ตาย เข้าเมืองไปตีตัวอื่นให้ตาย หรือจะเก็บแต้มให้ครบ 20 เพื่อชนะ ตัดสินใจให้ดี ตีตัวอื่นเพลินเกินจะโดนเขาตีเลือกหมดตายแทนไม่รู้ตัว เล่นง่าย แต่มันส์มาก การันตีด้วยรางวัล Golden Geek Best ถึง 3 สาขา Party  Family และ Children’s Board Game ปี 2012 พร้อมแล้วลุย!</h3>
+      <Link to={`http://localhost:3000/comment/add/13`}>Comment</Link>
     <Footer/>
 </div>      
 

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_06 from "../src/img/game_06.jpg";
 import game_06_1 from "../src/img/game_06-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game06() {
   return (
     <div>
@@ -98,6 +98,7 @@ function Game06() {
         (เดินตรง ยึดทแยง) วิธีจบ เมื่อฝ่ายใด ฝ่ายนึง “รุกจน” (checkmate)
         คิงฝ่ายตรงข้ามได้ จะชนะ
       </h3>
+      <Link to={`http://localhost:3000/comment/add/6`}>Comment</Link>
       <Footer />
     </div>
   );

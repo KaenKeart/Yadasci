@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_05 from "../src/img/game_05.jpg";
 import game_05_1 from "../src/img/game_05-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game05() {
   return (
     <div>
@@ -82,6 +82,7 @@ function Game05() {
         ที่จะออกไปตามหานกที่ดีที่สุดในอาณาเขตรักษาพันธุ์ที่เราดูแล
         ซึ่งนกแต่ละชนิดก็จะมีการเชื่อมโยงความสามารถพิเศษ ให้เราได้คะแนนมากขึ้น
       </h3>
+      <Link to={`http://localhost:3000/comment/add/5`}>Comment</Link>
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import game_08 from "../src/img/game_08.jpg";
 import game_08_1 from "../src/img/game_08-1.jpg";
 import "./game.css";
-
+import { Link } from "react-router-dom";
 function Game08() {
   return (
     <div>
@@ -93,6 +93,7 @@ function Game08() {
         โดยต้องเล่นร่วมกับเกมพลิกพิภพดาวอังคารภาคหลัก
         และสามารถนำไปใช้เล่นร่วมกับภาคเสริมชุดอื่นๆ รวมถึงกติกาพิเศษอื่นๆได้
       </h3>
+      <Link to={`http://localhost:3000/comment/add/8`}>Comment</Link>
       <Footer />
     </div>
   );

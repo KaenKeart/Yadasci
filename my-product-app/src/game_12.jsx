@@ -2,7 +2,7 @@ import Footer from './footer';
 import Navbar from './Navbar';  
 import game_12 from '../src/img/game_12.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game12() {
 
     return (
@@ -67,6 +67,7 @@ function Game12() {
 ซองใส่การ์ด: Light Green Peridot
 ขนาดซอง: 41 x 63 มม. 
 จำนวน:  36 ซอง /  1 แพค</h3>
+<Link to={`http://localhost:3000/comment/add/12`}>Comment</Link>
     <Footer/>
 </div>      
 
