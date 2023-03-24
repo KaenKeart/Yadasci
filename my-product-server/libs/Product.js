@@ -17,6 +17,175 @@ module.exports = {
         return await pool.query(sql);
     },
 
+    createComment1: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment1 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment2: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment2 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment3: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment3 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment4: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment4 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment5: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment5 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment6: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment6 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment7: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment7 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment8: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment8 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment9: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment9 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment10: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment10 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment11: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment11 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment12: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment12 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment13: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment13 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment14: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment14 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment15: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment15 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment16: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment16 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment17: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment17 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment18: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment18 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment19: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment19 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment20: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment20 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment21: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment21 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment22: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment22 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment23: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment23 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+    createComment24: async (pool, usercom, comment) => {
+        var sql = "INSERT INTO comment24 (user_com, comment) "
+                    + "VALUES (?, ?)";
+        sql = mysql.format(sql, [usercom, comment]);
+
+        return await pool.query(sql);
+    },
+
     getByProductId: async (pool, productId) => {
         var sql = "SELECT * FROM products WHERE product_id = ?";
         sql = mysql.format(sql, [productId]);
