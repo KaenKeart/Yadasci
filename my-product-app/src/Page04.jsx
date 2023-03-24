@@ -1,18 +1,70 @@
-import { Link } from 'react-router-dom';
 import Footer from './footer';
 import Navbar from './Navbar';
-import game_01 from '../src/img/game_01.jpg'
-import game_02 from '../src/img/game_02.jpg'
-import game_03 from '../src/img/game_03.jpg'
-import game_04 from '../src/img/game_04.jpg'
-import game_05 from '../src/img/game_05.jpg'
-import game_17 from '../src/img/game_17.jpg'
-import game_18 from '../src/img/game_18.jpg'
-import game_19 from '../src/img/game_19.jpg'
-import game_20 from '../src/img/game_20.jpg'
+import { API_GET, API_POST } from "./api"
+import ProductItem from "./Productitem"
+import { useEffect, useState } from "react"
 
 function Page04() {
+  const [productTypes, setProductTypes] = useState([]);
+  const [productTypeId, setProductTypeId] = useState(0);
+  const [products, setProducts] = useState([]);
 
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(
+                "http://localhost:8000/api/product_types",
+                {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                        'content-Type': 'application/json',
+                        Authorization: "Bearer " + localStorage.getItem("access_token")
+                    }
+                }
+            );
+
+            let json = await response.json();
+            setProductTypes(json.data);
+        }
+
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(
+                "http://localhost:8000/api/products/type/" + productTypeId,
+                {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                        'content-Type': 'application/json',
+                        Authorization: "Bearer " + localStorage.getItem("access_token")
+                    }
+                }
+            );
+
+            const json = await response.json();
+            setProducts(json.data);
+        }
+
+        fetchData();
+    }, [productTypeId]);
+
+    const fetchProducts = async () => {
+        let json = await API_GET("products/type/" + productTypeId);
+        setProducts(json.data);
+    }
+
+    const onDelete = async (data) => {
+        let json = await API_POST("product/delete", {
+            product_id: data.product_id
+        });
+
+        if (json.result) {
+            fetchProducts();
+        }
+    }
     return (
 
 <div>
@@ -21,89 +73,18 @@ function Page04() {
     <span style={{color: '#5B785B'}}>ยอดนิยม</span>
   </h1>
   <main>
-    <section>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_01"><img src={game_01} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส</h6>
-          <div className="text-end text-danger">3,650 ราคา
-          </div>
-          <Link to={"/product/cart"} className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_02"><img src={game_02} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เกมโค่นอำนาจ</h6>
-          <div className="text-end text-danger">700 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_03"><img src={game_03} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>7 สิ่งมหัศจรรย์</h6>
-          <div className="text-end text-danger">1,800 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_04"><img src={game_04} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เกมล่าปริศนามนุษย์หมาป่า</h6>
-          <div className="text-end text-danger">850 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_05"><img src={game_05} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>ปีกปักษา</h6>
-          <div className="text-end text-danger">1,900 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_17"><img src={game_17} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เหมียว ระเบิด</h6>
-          <div className="text-end text-danger">950 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_18"><img src={game_18} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>ผู้ตรวจการแห่งนอตติงแฮม</h6>
-          <div className="text-end text-danger">1,450 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_19"><img src={game_19} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>พลิกพิภพดาวอังคาร</h6>
-          <div className="text-end text-danger">2,450 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-      <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="/game_20"><img src={game_20} className="card-img-top" alt="..." width={250} height={250} /></Link>
-        <div className="card-body">
-          <h6 className="card-title" style={{minHeight: 70}}>เกมค้าเพชร</h6>
-          <div className="text-end text-danger">1,500 ราคา
-          </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
-        </div>
-      </div>
-    </section>
+  <div className="container mt-3">
+    {
+        products.filter(item => [1, 2, 3, 4, 5, 17, 18, 19, 20].includes(item.product_id))
+        .map(item => (
+            <ProductItem 
+                key={item.product_id}
+                data={item} 
+                onDelete={onDelete} 
+            />
+        ))
+    }
+</div>
   </main>
     <Footer/>
 

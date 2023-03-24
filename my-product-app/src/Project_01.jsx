@@ -1,5 +1,4 @@
 import { Carousel } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import Game01 from '../src/img/Game01.PNG'
 import Game02 from '../src/img/Game02.png'
 import Game03 from '../src/img/Game03.png'
@@ -142,7 +141,7 @@ function Project() {
   <main>
   <div className="container mt-3">
     {
-        products.filter(item => [22, 23, 24].includes(item.product_id))
+        products.filter(item => [21, 11, 24].includes(item.product_id))
         .map(item => (
             <ProductItem 
                 key={item.product_id}
