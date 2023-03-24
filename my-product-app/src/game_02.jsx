@@ -5,7 +5,7 @@ import game_02 from '../src/img/game_01.jpg'
 import game_02_1 from '../src/img/game_01-2.jpg'
 import './game.css';
 
-function Game01() {
+function Game02() {
 
     return (
 
@@ -43,7 +43,7 @@ function Game01() {
           </li>
         </ul>
 
-        <p>฿2650</p>  
+        <p>฿700</p>  
                           <input type="number" id="quantity_63f673ea16af6" className="input-text qty text" step={1} min={1} max name="quantity" defaultValue={1} title="จำนวน" size={4} placeholder inputMode="numeric" autoComplete="off" />
                           </div>
                           
@@ -51,10 +51,10 @@ function Game01() {
                         </form>
       </section>
  
-      <h3 id="DetailGame">รายละเอียด</h3>
+      <h3 id="DetailGame">ในเกมโค่นอำนาจ เราจะเป็นผู้นำตระกูลที่จะต้องทำหน้าที่ในนำพาตระกูลเราให้ไปอยู่ในจุดสูงสุดของการปกครอง โดยผู้เล่นแต่ละคนจะมีอิทธิพลในสายอาชีพต่างๆที่ไม่เหมือนกัน ซึ่งเราจะต้องจัดสรรทรัพยากรที่เรามี และการใช้อิทธิพลเหล่านี้ให้ถูกจังหวะเพื่อชัยชนะ</h3>
     <Footer/>
 </div>      
 
    )
 }
-export default Game01;
+export default Game02;
