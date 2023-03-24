@@ -199,6 +199,7 @@ module.exports = {
                 + "product_type_id=?,"
                 + "price=?,"
                 + "stock=? "
+                + "sales=? "
                 + "WHERE product_id = ?";
         sql = mysql.format(sql, [productName, productTypeId ,price, stock, productId]);
 
