@@ -75,9 +75,7 @@ export default function Navbar() {
                 <Link to="/page04" className="nav-link">
                   เกมยอดนิยม
                 </Link>
-                <Link to="/page04" className="nav-link">
-                  ตะกร้า
-                </Link>
+
                 <MDBDropdown>
                   <MDBDropdownToggle
                     tag="a"

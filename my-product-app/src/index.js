@@ -64,6 +64,7 @@ import Comment21 from "./Comment21";
 import Comment22 from "./Comment22";
 import Comment23 from "./Comment23";
 import Comment24 from "./Comment24";
+import Cart from "./cart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -133,6 +134,7 @@ root.render(
       <Route path="/game_22" element={<Game22 />} />
       <Route path="/game_23" element={<Game23 />} />
       <Route path="/game_24" element={<Game24 />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
