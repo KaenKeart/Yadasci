@@ -261,6 +261,26 @@ app.post("/api/product/add", checkAuth, async (req, res) => {
     }
 });
 
+app.post("/register", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createUsers(pool,
+            input.user_name,input.user_pwd,
+            input.first_name,input.last_name,
+            input.email);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
 
 app.get("/api/product/:productId", async (req, res) => {
     const productId = req.params.productId;
