@@ -7,7 +7,7 @@ import { SERVER_URL } from "./app.config";
     
 
 
-export default function ProductDetail() {
+export default function ProductChart() {
     let params = useParams();
 
     const [productId, setProductId] = useState(0);
@@ -46,11 +46,16 @@ export default function ProductDetail() {
             let json = await API_GET("product/" + productId);
 
             var data = json.data[0];
+
+            setProductId(data.product_id);
+            setProductName(data.product_name);
+            setProductTypeId(data.product_type_id);
+            setPrice(data.price);
             setStock(data.stock);
             setImageUrl(data.image_url);
         }
 
-        if (params.productId != "add") {
+        if (params.productId != "chart") {
             fetchData([params.productId]);
         }
     }, [params.productId]);
@@ -83,31 +88,7 @@ export default function ProductDetail() {
         setImageUrl(json.data);
     }
 
-    const getImageComponent = () => {
-        return (
-            <div className="container m-auto">
-                <Form>
-                    <Row>
-                        <Form.Group as={Col} md="3" controlId="formImage" className="mb-3">
-                            <img src={`${SERVER_URL}images/${imageUrl}`} width={150} alt="Upload status" />
-                        </Form.Group>
-                        <Form.Group as={Col} md="9" controlId="formFile" className="mb-3">
-                            <Form.Label>เลือกรูปภาพ</Form.Label>
-                            <Form.Control
-                                type="file"
-                                name="file"
-                                onChange={onFileSelected} />
-                            <Button
-                                type="button"
-                                className="mt-3"
-                                onClick={onUploadImage}
-                            >Upload</Button>
-                        </Form.Group>
-                    </Row>
-                </Form>
-            </div>
-        );
-    }
+
 
 
     const doCreateProduct = async () => {
@@ -121,6 +102,9 @@ export default function ProductDetail() {
                     Authorization: "Bearer " + localStorage.getItem("access_token")
                 },
                 body: JSON.stringify({
+                    product_name: productName,
+                    product_type_id: productTypeId,
+                    price: price,
                     stock: stock
                 })
             }
@@ -134,6 +118,10 @@ export default function ProductDetail() {
 
     const doUpdateProduct = async () => {
         const json = await API_POST("product/update", {
+            product_id: productId,
+            product_name: productName,
+            product_type_id: productTypeId,
+            price: price,
             stock: stock,
         });
 
@@ -149,7 +137,7 @@ export default function ProductDetail() {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            if (params.productId == "add") {
+            if (params.productId == "cart") {
                 doCreateProduct();
             } else {
                 doUpdateProduct();
@@ -161,15 +149,8 @@ export default function ProductDetail() {
 
     return (
         <>
-            {
-                (params.productId != "add") ?
-                    getImageComponent()
-                    : <></>
-            }
-
-            <div id="ProductDetail" className="container m-auto">
-                    <Form noValidate validated={validated} onSubmit={onSave}>
-
+            <div id="ProductChart" className="container m-auto">
+                    <Form noValidate validated={validated} onSubmit={onSave}>       
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="validateProductName">
                                 <Form.Label>จำนวนสินค้า</Form.Label>

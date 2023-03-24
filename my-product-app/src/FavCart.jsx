@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function FavCart() {
 
     return (
-        <div><Link href="#" className="btn btn-primary" style={{ marginRight: '5px' }}>
+        <div><Link to={"/product/add"} href="#" className="btn btn-primary" style={{ marginRight: '5px' }}>
   หยิบใส่ตะกร้า
 </Link>
 <Link href="#" className="btn btn-danger" style={{ marginLeft: '5px' }}>
