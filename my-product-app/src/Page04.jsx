@@ -28,7 +28,7 @@ function Page04() {
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส</h6>
           <div className="text-end text-danger">3,650 ราคา
           </div>
-          <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
+          <Link to={"/product/cart"} className="btn btn-primary">หยิบใส่ตะกร้า</Link>
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
