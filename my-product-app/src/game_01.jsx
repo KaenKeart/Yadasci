@@ -40,15 +40,10 @@ function Game01() {
             <span className="elementor-icon-list-icon">
 				</span>
             <span className="elementor-icon-list-text">จำนวนผู้เล่น: 1-5 คน</span>
-          </li>
-          <li className="elementor-icon-list-item">
-            <span className="elementor-icon-list-icon">
-				</span>
-            <span className="elementor-icon-list-text">เวลาในการเล่น: 60-90 นาที</span>
-          </li>
+            </li>
         </ul>
 
-        <p>฿2650</p>  
+        <p>฿3650</p>  
                           <input type="number" id="quantity_63f673ea16af6" className="input-text qty text" step={1} min={1} max name="quantity" defaultValue={1} title="จำนวน" size={4} placeholder inputMode="numeric" autoComplete="off" />
                           </div>
                           
@@ -56,7 +51,37 @@ function Game01() {
                         </form>
       </section>
  
-      <h3 id="DetailGame">รายละเอียด</h3>
+      <h3 id="DetailGame">อุปกรณ์ในกล่อง
+
+คู่มืออ้างอิงกติกา
+แผ่นแผนที่ 24 แผ่น
+การ์ดนักสืบและฟิกเกอร์เข้าคู่กัน 8 คู่
+การ์ดไอเทมทั่่วไป 40 ใบ
+การ์ดไอเทมพิเศษ 22 ใบ
+โทเคนค้นหา / โต้ตอบ16 อัน
+โทเคนสำรวจ / สายตา 16 อัน
+โทเคนบุคคล 22 อัน
+การ์ดเวท 30 ใบ
+การ์ดสถานะ 37 ใบ
+โทเคนสิ่่งกีดขวาง 4 อัน
+โทเคนทางลับ 4 อัน
+โทเคนไฟ /ความมืด 18 อัน
+การ์ดแดเมจ 40 ใบ
+การ์ดฮอร์เรอร์ 40 ใบ
+โทเคนกำแพง 8 อัน
+โทเคนประตู 4 อัน
+โทเคนระบุตัว 6 อัน
+โทเคนมอนสเตอร์และฟิกเกอร์เข้าคู่กัน 24 คู่
+โทเคนเบาะแส 26 อัน
+ลูกเต๋า 5 ลูก
+ซอง (ต้องซื้อแยก)
+
+ซองใส่การ์ด: Blue Turquiose
+ขนาดซอง: 70 x 120 มม. 
+จำนวน:  8 ซอง /  1 แพค
+ซองใส่การ์ด: Light Green Peridot
+ขนาดซอง: 41 x 63 มม. 
+จำนวน:  221 ซอง /  5 แพค</h3>
     <Footer/>
 </div>      
 

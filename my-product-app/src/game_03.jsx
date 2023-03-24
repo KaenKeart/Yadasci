@@ -1,8 +1,8 @@
 import { Carousel } from 'react-bootstrap';
 import Footer from './footer';
 import Navbar from './Navbar';  
-import game_03 from '../src/img/game_01.jpg'
-import game_03_1 from '../src/img/game_01-2.jpg'
+import game_03 from '../src/img/game_03.jpg'
+import game_03_1 from '../src/img/game_03-1.jpg'
 import './game.css';
 
 function Game03() {
