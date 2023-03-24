@@ -7,7 +7,6 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import Logo_YADA from "../src/img/Logo_YADA.png";
-import Cart from "./cart";
 
 export default function Navbar() {
   return (
@@ -75,6 +74,9 @@ export default function Navbar() {
                 </Link>
                 <Link to="/page04" className="nav-link">
                   เกมยอดนิยม
+                </Link>
+                <Link to="/page04" className="nav-link">
+                  ตะกร้า
                 </Link>
                 <MDBDropdown>
                   <MDBDropdownToggle

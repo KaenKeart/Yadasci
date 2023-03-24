@@ -1,38 +1,45 @@
 import React, { useState } from "react";
 
-function Cart() {
-  const [products, setProducts] = useState([
-    { id: 1, name: "Product A", price: 100 },
-    { id: 2, name: "Product B", price: 200 },
-    { id: 3, name: "Product C", price: 300 },
-  ]);
-  const [cart, setCart] = useState([]);
+function ShoppingCart() {
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+  function addItemToCart(item) {
+    setCartItems([...cartItems, item]);
+    setTotalPrice(totalPrice + item.price);
+  }
+
+  function removeItemFromCart(index) {
+    const newCartItems = [...cartItems];
+    setTotalPrice(totalPrice - newCartItems[index].price);
+    newCartItems.splice(index, 1);
+    setCartItems(newCartItems);
+  }
 
   return (
     <div>
-      <h1>Product List</h1>
+      <h2>Shopping Cart</h2>
+      {cartItems.length === 0 && <p>No items in cart</p>}
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price} baht
-            <button onClick={() => addToCart(product)}>Add to cart</button>
+        {cartItems.map((item, index) => (
+          <li key={index}>
+            {item.name} - ${item.price}
+            <button onClick={() => removeItemFromCart(index)}>Remove</button>
           </li>
         ))}
       </ul>
-      <h2>Cart</h2>
-      <ul>
-        {cart.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price} baht
-          </li>
-        ))}
-      </ul>
+      <p>Total Price: ${totalPrice}</p>
+      <button onClick={() => addItemToCart({ name: "Item 1", price: 10 })}>
+        Add Item 1
+      </button>
+      <button onClick={() => addItemToCart({ name: "Item 2", price: 20 })}>
+        Add Item 2
+      </button>
+      <button onClick={() => addItemToCart({ name: "Item 3", price: 30 })}>
+        Add Item 3
+      </button>
     </div>
   );
 }
 
-export default Cart;
+export default ShoppingCart;
