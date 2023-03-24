@@ -7,7 +7,7 @@ import { SERVER_URL } from "./app.config";
     
 
 
-export default function ProductChart() {
+export default function ProductDetail() {
     let params = useParams();
 
     const [productId, setProductId] = useState(0);
@@ -16,11 +16,12 @@ export default function ProductChart() {
     const [productTypeId, setProductTypeId] = useState(0);
     const [price, setPrice] = useState(0);
     const [stock, setStock] = useState(0);
+    const [sales, setsales] = useState(0);
     const [validated, setValidated] = useState(false);
     const [imageUrl, setImageUrl] = useState("");
     const [selectedFile, setSelectedFile] = useState("");
 
-
+    //ใช้ดึงข้อมูล
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
@@ -40,7 +41,7 @@ export default function ProductChart() {
         }
         fetchData();
     }, []);
-
+//
     useEffect(() => {
         async function fetchData(productId) {
             let json = await API_GET("product/" + productId);
@@ -55,7 +56,7 @@ export default function ProductChart() {
             setImageUrl(data.image_url);
         }
 
-        if (params.productId != "chart") {
+        if (params.productId != "add") {
             fetchData([params.productId]);
         }
     }, [params.productId]);
@@ -88,7 +89,31 @@ export default function ProductChart() {
         setImageUrl(json.data);
     }
 
-
+    const getImageComponent = () => {
+        return (
+            <div className="container m-auto">
+                <Form>
+                    <Row>
+                        <Form.Group as={Col} md="3" controlId="formImage" className="mb-3">
+                            <img src={`${SERVER_URL}images/${imageUrl}`} width={150} alt="Upload status" />
+                        </Form.Group>
+                        <Form.Group as={Col} md="9" controlId="formFile" className="mb-3">
+                            <Form.Label>เลือกรูปภาพ</Form.Label>
+                            <Form.Control
+                                type="file"
+                                name="file"
+                                onChange={onFileSelected} />
+                            <Button
+                                type="button"
+                                className="mt-3"
+                                onClick={onUploadImage}
+                            >Upload</Button>
+                        </Form.Group>
+                    </Row>
+                </Form>
+            </div>
+        );
+    }
 
 
     const doCreateProduct = async () => {
@@ -102,10 +127,8 @@ export default function ProductChart() {
                     Authorization: "Bearer " + localStorage.getItem("access_token")
                 },
                 body: JSON.stringify({
-                    product_name: productName,
-                    product_type_id: productTypeId,
-                    price: price,
-                    stock: stock
+                    sales: sales,
+
                 })
             }
         );
@@ -130,6 +153,7 @@ export default function ProductChart() {
         }
     }
 
+    //ใช้เก็บข้อมูล
     const onSave = (event) => {
         const form = event.currentTarget;
         event.preventDefault();
@@ -149,8 +173,15 @@ export default function ProductChart() {
 
     return (
         <>
-            <div id="ProductChart" className="container m-auto">
-                    <Form noValidate validated={validated} onSubmit={onSave}>       
+            {
+                (params.productId != "cart") ?
+                    getImageComponent()
+                    : <></>
+            }
+
+            <div id="ProductDetail" className="container m-auto">
+                    <Form noValidate validated={validated} onSubmit={onSave}>
+
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="validateProductName">
                                 <Form.Label>จำนวนสินค้า</Form.Label>
