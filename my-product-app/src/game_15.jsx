@@ -14,10 +14,10 @@ function Game15() {
      <div id="slide_game">
             <Carousel >
       <Carousel.Item interval={1000}>
-    <img src={game_01} className="img_responsive" alt="..."  />
+    <img src={game_15} className="img_responsive" alt="..."  />
       </Carousel.Item>
       <Carousel.Item interval={500}>
-    <img src={game_01_2} className="img_responsive" alt="..."/>
+    <img src={game_15_1} className="img_responsive" alt="..."/>
       </Carousel.Item>
     </Carousel> 
      </div>

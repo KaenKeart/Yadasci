@@ -5,7 +5,7 @@ import game_18 from '../src/img/game_18.jpg'
 import game_18_1 from '../src/img/game_18-1.jpg'
 import './game.css';
 
-function Game10() {
+function Game18() {
 
     return (
 
