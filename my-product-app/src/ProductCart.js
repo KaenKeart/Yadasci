@@ -1,9 +1,9 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { API_GET, API_POST } from "./api";
+import { API_GET } from "./api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { SERVER_URL } from "./app.config";
+
 
 export default function ProductDetail() {
   let params = useParams();
@@ -55,8 +55,8 @@ export default function ProductDetail() {
     }
   }, [params.productId]);
 
-  const doCreateProduct = async () => {
-    const response = await fetch("http://localhost:8000/api/product/add", {
+  const doCreateCart = async () => {
+    const response = await fetch("http://localhost:8000/api/product/cart", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -73,15 +73,6 @@ export default function ProductDetail() {
     }
   };
 
-  const doUpdateProduct = async () => {
-    const json = await API_POST("product/update", {
-      sales: sales,
-    });
-
-    if (json.result) {
-      window.location = "/home";
-    }
-  };
 
   //ใช้เก็บข้อมูล
   const onSave = (event) => {
@@ -91,11 +82,9 @@ export default function ProductDetail() {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-      if (params.productId == "cart") {
-        doCreateProduct();
-      } else {
-        doUpdateProduct();
-      }
+
+        doCreateCart();
+
     }
 
     setValidated(true);

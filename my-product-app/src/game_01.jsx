@@ -89,8 +89,9 @@ function Game01() {
         x 120 มม. จำนวน: 8 ซอง / 1 แพค ซองใส่การ์ด: Light Green Peridot ขนาดซอง:
         41 x 63 มม. จำนวน: 221 ซอง / 5 แพค
       </h3>
-      <Footer />
       <Link to={`http://localhost:3000/comment/add/1`}>Comment</Link>
+      <Footer />
+      
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import game_15 from '../src/img/game_15.jpg'
 import game_15_1 from '../src/img/game_15-1.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game15() {
 
     return (
@@ -57,6 +57,7 @@ function Game15() {
       </section>
  
       <h3 id="DetailGame">รายละเอียด บอร์ดเกมแนว Puzzle ที่รอการพิสูจน์ฝีมือการจัดกระเป๋าของคุณให้ปิดได้ลงตัว มีของเยอะแยะไปหมด ทั้งห่วงยาง แว่นตา กางเกง รองเท้า แต่ละชิ้นก็คนละทรง โจทย์มีความยากง่ายถึง 3 ระดับให้เลือก พร้อมเฉลยในกล่อง เป็นเกมที่เหมาะสำหรับเด็ก ๆ หรือแม้แต่ผู้ใหญ่ที่ชอบไขปัญหาก็ไว้ฝึกสมองได้อย่างดี</h3>
+      <Link to={`http://localhost:3000/comment/add/15`}>Comment</Link>
     <Footer/>
 </div>      
 

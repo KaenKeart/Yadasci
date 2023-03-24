@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import game_18 from '../src/img/game_18.jpg'
 import game_18_1 from '../src/img/game_18-1.jpg'
 import './game.css';
-
+import { Link } from "react-router-dom";
 function Game18() {
 
     return (
@@ -57,6 +57,7 @@ function Game18() {
       </section>
  
       <h3 id="DetailGame">รายละเอียด เกมเจรจาต่อรองที่มาในรูปแบบของการนำสินค้าเข้าเมืองที่เต็มไปด้วยการชิงเหลียมเพื่อชัยชนะ เกมนี้ผู้เล่นจะสวมบทบาทพ่อค้าแม่ค้า และจะต้องทำทุกวิถีทางเพื่อทำกำไรให้ได้มากที่สุดจากสินค้าที่มี ทั้งจากสินค้าที่ได้รับอนุญาต หรือลักลอบขนของเถี่อนราคาแพงเข้ามาขาย  ชึ่งปราการด่านแรกนั้นคือท่านผู้ตรวจการหน้าเลือดแห่งเมืองนอตทิงแฮม</h3>
+      <Link to={`http://localhost:3000/comment/add/18`}>Comment</Link>
     <Footer/>
 </div>      
 
