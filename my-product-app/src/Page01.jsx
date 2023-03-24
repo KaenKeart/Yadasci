@@ -19,7 +19,7 @@ function Page01() {
   <main>
     <section>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_22.jsx"><img src={game_22} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_22"><img src={game_22} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>ไชน่าทาวน์</h6>
           <div className="text-end text-danger">1,450 ราคา
@@ -29,7 +29,7 @@ function Page01() {
       </div>
 
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_23.jsx"><img src={game_23} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_23"><img src={game_23} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>หนึ่งคืนปริศนาเกมล่ามนุษย์หมาป่า</h6>
           <div className="text-end text-danger">850 ราคา
