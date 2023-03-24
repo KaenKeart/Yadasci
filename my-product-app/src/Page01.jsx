@@ -25,6 +25,8 @@ function Page01() {
           <div className="text-end text-danger">1,450 ราคา
           </div>
           <Link href="#" className="btn btn-primary">หยิบใส่ตะกร้า</Link>
+                  <Link to={"/product/cart"} >ตะกร้า</Link>
+
         </div>
       </div>
 

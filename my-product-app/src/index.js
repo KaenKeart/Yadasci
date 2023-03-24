@@ -42,6 +42,7 @@ import Game24 from './game_24';
 import ProductDetail from './ProductDetail';
 import Report from './Report';
 import Stock from './Stock';
+import ProductCart from './ProductCart';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,6 +56,7 @@ root.render(
       <Route path="/page03" element={<Page03 />} />
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
+      <Route path="/product/:productId" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
       <Route path="/game_01" element={<Game01 />} />
