@@ -281,6 +281,462 @@ app.post("/api/product/add", checkAuth, async (req, res) => {
   }
 });
 
+app.post("/comment/add/1", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment1(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/2", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment2(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/3", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment3(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/4", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment4(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/5", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment5(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/6", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment6(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/7", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment7(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/8", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment8(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/9", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment9(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/10", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment10(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/11", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment11(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/12", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment12(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/13", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment13(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/14", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment14(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/15", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment15(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/16", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment16(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/17", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment17(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/18", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment18(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/19", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment19(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/20", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment20(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/21", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment21(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/22", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment22(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/23", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment23(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
+app.post("/comment/add/24", checkAuth, async (req, res) => {
+    const input = req.body;
+
+    try {
+        var result = await Product.createComment24(pool,
+            input.user_com,
+            input.comment);
+
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+});
+
 app.post("/register", checkAuth, async (req, res) => {
   const input = req.body;
 
@@ -326,6 +782,7 @@ app.get("/api/product/:productId", async (req, res) => {
 app.post("/api/product/update", checkAuth, async (req, res) => {
   const input = req.body;
 
+<<<<<<< HEAD
   try {
     var result = await Product.updateProduct(
       pool,
@@ -346,6 +803,25 @@ app.post("/api/product/update", checkAuth, async (req, res) => {
       message: ex.message,
     });
   }
+=======
+    try {
+        var result = await Product.updateProduct(pool,
+            input.product_id,
+            input.product_name,
+            input.product_type_id,
+            input.price,
+            input.stock);
+        
+        res.json({
+            result: true
+        });
+    } catch (ex) {
+        res.json({
+            result: false,
+            message: ex.message
+        });
+    }
+>>>>>>> 108133c27030bc8aca4d3118de6228503142e564
 });
 
 app.post("/api/product/delete", checkAuth, async (req, res) => {
