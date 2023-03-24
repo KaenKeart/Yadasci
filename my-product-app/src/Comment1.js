@@ -11,13 +11,11 @@ export default function Comment1() {
 
   useEffect(() => {
     async function fetchData() {
+      let json = await API_GET("comment/add/1");
+      var data = json.data[0];
 
-        let json = await API_GET("comment/add/1");
-        var data = json.data[0];
-
-        setUserCom(data.user_com);
-        setComment(data.comment);
-
+      setUserCom(data.user_com);
+      setComment(data.comment);
     }
 
     fetchData();

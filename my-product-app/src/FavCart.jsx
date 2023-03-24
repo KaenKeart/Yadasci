@@ -1,18 +1,32 @@
 import { Link } from "react-router-dom";
 
 function FavCart() {
-
-    return (
-        <div><Link to={"/product/cart"} href="#" className="btn btn-primary" style={{ marginRight: '5px' }}>
-  หยิบใส่ตะกร้า
-</Link>
-<Link href="#" className="btn btn-danger" style={{ marginLeft: '5px' }}>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-  </svg>
-</Link></div>
-        
-
-            )
+  return (
+    <div>
+      <Link
+        to={"/product/cart"}
+        href="#"
+        className="btn btn-primary"
+        style={{ marginRight: "5px" }}
+      >
+        หยิบใส่ตะกร้า
+      </Link>
+      <Link href="#" className="btn btn-danger" style={{ marginLeft: "5px" }}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-heart-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+          />
+        </svg>
+      </Link>
+    </div>
+  );
 }
 export default FavCart;

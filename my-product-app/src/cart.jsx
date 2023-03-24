@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Cart() {
   const [products, setProducts] = useState([
-    { id: 1, name: 'Product A', price: 100 },
-    { id: 2, name: 'Product B', price: 200 },
-    { id: 3, name: 'Product C', price: 300 }
+    { id: 1, name: "Product A", price: 100 },
+    { id: 2, name: "Product B", price: 200 },
+    { id: 3, name: "Product C", price: 300 },
   ]);
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-  }
+  };
 
   return (
     <div>
