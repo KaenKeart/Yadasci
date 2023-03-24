@@ -4,11 +4,6 @@ import Navbar from './Navbar';
 import game_01 from '../src/img/game_01.jpg'
 import game_01_2 from '../src/img/game_01-2.jpg'
 import './game.css';
-import Comment from './comment';
-
-
-
-
 
 function Game01() {
 
@@ -60,8 +55,8 @@ function Game01() {
                           <button type="submit" name="add-to-cart" value={31988} className="single_add_to_cart_button button alt">หยิบใส่ตะกร้า</button>
                         </form>
       </section>
-
-    <Comment/>
+ 
+      <h3 id="DetailGame">รายละเอียด</h3>
     <Footer/>
 </div>      
 

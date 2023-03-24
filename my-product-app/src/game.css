@@ -16,6 +16,11 @@
   
 }
 
+#DetailGame {
+  padding: 50px;
+}
+
+
 form.cart {
   width: 400px;
   height: auto;    
