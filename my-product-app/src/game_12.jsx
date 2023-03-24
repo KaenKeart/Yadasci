@@ -1,26 +1,18 @@
-import { Carousel } from 'react-bootstrap';
 import Footer from './footer';
 import Navbar from './Navbar';  
-import game_12 from '../src/img/game_09.jpg'
-import game_09_1 from '../src/img/game_09-1.jpg'
+import game_12 from '../src/img/game_12.jpg'
 import './game.css';
 
-function Game09() {
+function Game12() {
 
     return (
 
 <div>
     <Navbar/> 
-     <div id="slide_game">
-            <Carousel >
-      <Carousel.Item interval={1000}>
+
     <img src={game_12} className="img_responsive" alt="..."  />
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-    <img src={game_12_1} className="img_responsive" alt="..."/>
-      </Carousel.Item>
-    </Carousel> 
-     </div>
+
+
     <section id="basket">
                           <form className="cart" action="#" method="post" encType="multipart/form-data">
                           <div className="quantity">
