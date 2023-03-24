@@ -261,6 +261,7 @@ app.post("/api/product/add", checkAuth, async (req, res) => {
     }
 });
 
+
 app.get("/api/product/:productId", async (req, res) => {
     const productId = req.params.productId;
 
