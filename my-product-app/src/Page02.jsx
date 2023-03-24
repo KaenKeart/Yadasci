@@ -19,7 +19,7 @@ function Page02() {
   <main>
     <section>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_06.jsx"><img src={game_06} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_06"><img src={game_06} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>หมากรุกสากลแม่เหล็ก</h6>
           <div className="text-end text-danger">140 ราคา
@@ -28,7 +28,7 @@ function Page02() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_07.jsx"><img src={game_07} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_07"><img src={game_07} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>เกมแม่เหล็กบันไดงู</h6>
           <div className="text-end text-danger">199 ราคา
@@ -37,7 +37,7 @@ function Page02() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_13.jsx"><img src={game_13} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_13"><img src={game_13} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>ราชันแห่งโตเกียว</h6>
           <div className="text-end text-danger">1,450 ราคา
@@ -46,7 +46,7 @@ function Page02() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_14.jsx"><img src={game_14} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_14"><img src={game_14} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>นักท่องฝัน</h6>
           <div className="text-end text-danger">1,400 ราคา
@@ -55,7 +55,7 @@ function Page02() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_15.jsx"><img src={game_15} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_15"><img src={game_15} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>Get Packing</h6>
           <div className="text-end text-danger">950 ราคา
@@ -64,7 +64,7 @@ function Page02() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_16.jsx"><img src={game_16} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_16"><img src={game_16} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>เกมจดหมายรัก (SSR)</h6>
           <div className="text-end text-danger">450 ราคา

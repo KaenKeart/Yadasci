@@ -18,7 +18,7 @@ function Page03() {
   <main>
     <section>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_08.jsx"><img src={game_08} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_08"><img src={game_08} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>พลิกพิภพดาวอังคาร อาณานิคม</h6>
           <div className="text-end text-danger">950 ราคา
@@ -27,7 +27,7 @@ function Page03() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_09.jsx"><img src={game_09} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_09"><img src={game_09} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>พลิกพิภพดาวอังคาร ปฏิบัติการดาวศุกร์</h6>
           <div className="text-end text-danger">950 ราคา
@@ -36,7 +36,7 @@ function Page03() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_10.jsx"><img src={game_10} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_10"><img src={game_10} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>พลิกพิภพดาวอังคาร ปฐมบท</h6>
           <div className="text-end text-danger">650 ราคา
@@ -45,7 +45,7 @@ function Page03() {
         </div>
       </div>
       <div className="card float-start me-4" style={{width: '18rem'}}>
-        <Link to="game_12.jsx"><img src={game_12} className="card-img-top" alt="..." width={250} height={250} /></Link>
+        <Link to="/game_12"><img src={game_12} className="card-img-top" alt="..." width={250} height={250} /></Link>
         <div className="card-body">
           <h6 className="card-title" style={{minHeight: 70}}>คฤหาสน์วิปลาส ไขประตูสู่วิวรณ์</h6>
           <div className="text-end text-danger">1,100 ราคา

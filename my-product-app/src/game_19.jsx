@@ -2,7 +2,7 @@ import { Carousel } from 'react-bootstrap';
 import Footer from './footer';
 import Navbar from './Navbar';  
 import game_19 from '../src/img/game_19.jpg'
-import game_19_2 from '../src/img/game_19-2.jpg'
+import game_19_1 from '../src/img/game_19-1.jpg'
 import './game.css';
 
 function Game19() {
@@ -17,7 +17,7 @@ function Game19() {
     <img src={game_19} className="img_responsive" alt="..."  />
       </Carousel.Item>
       <Carousel.Item interval={500}>
-    <img src={game_19_2} className="img_responsive" alt="..."/>
+    <img src={game_19_1} className="img_responsive" alt="..."/>
       </Carousel.Item>
     </Carousel> 
      </div>

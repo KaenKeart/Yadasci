@@ -16,7 +16,27 @@ import Page04 from './Page04';
 import Game01 from './game_01';
 import Game02 from './game_02';
 import Game03 from './game_03';
-
+import Game04 from './game_04';
+import Game05 from './game_05';
+import Game06 from './game_06';
+import Game07 from './game_07';
+import Game08 from './game_08';
+import Game09 from './game_09';
+import Game10 from './game_10';
+import Game11 from './game_11';
+import Game12 from './game_12';
+import Game13 from './game_13';
+import Game14 from './game_14';
+import Game15 from './game_15';
+import Game16 from './game_16';
+import Game17 from './game_17';
+import Game18 from './game_18';
+import Game19 from './game_19';
+import Game20 from './game_20';
+import Game21 from './game_21';
+import Game22 from './game_22';
+import Game23 from './game_23';
+import Game24 from './game_24';
 
 //import Home from './Home';
 import ProductDetail from './ProductDetail';
@@ -40,6 +60,34 @@ root.render(
       <Route path="/game_01" element={<Game01 />} />
       <Route path="/game_02" element={<Game02 />} />
       <Route path="/game_03" element={<Game03 />} />
+      <Route path="/game_04" element={<Game04 />} />
+      <Route path="/game_05" element={<Game05 />} />
+      <Route path="/game_06" element={<Game06 />} />
+      <Route path="/game_07" element={<Game07 />} />
+      <Route path="/game_08" element={<Game08 />} />
+      <Route path="/game_09" element={<Game09 />} />
+      <Route path="/game_10" element={<Game10 />} />
+      <Route path="/game_11" element={<Game11 />} />
+      <Route path="/game_12" element={<Game12 />} />
+      <Route path="/game_13" element={<Game13 />} />
+      <Route path="/game_14" element={<Game14 />} />
+      <Route path="/game_15" element={<Game15 />} />
+      <Route path="/game_16" element={<Game16 />} />
+      <Route path="/game_12" element={<Game12 />} />
+      <Route path="/game_13" element={<Game13 />} />
+      <Route path="/game_14" element={<Game14 />} />
+      <Route path="/game_15" element={<Game15 />} />
+      <Route path="/game_16" element={<Game16 />} />
+      <Route path="/game_17" element={<Game17 />} />
+      <Route path="/game_18" element={<Game18 />} />
+      <Route path="/game_19" element={<Game19 />} />
+      <Route path="/game_20" element={<Game20 />} />
+      <Route path="/game_21" element={<Game21 />} />
+      <Route path="/game_22" element={<Game22 />} />
+      <Route path="/game_23" element={<Game23 />} />
+      <Route path="/game_24" element={<Game24 />} />
+
+
 
 
 
