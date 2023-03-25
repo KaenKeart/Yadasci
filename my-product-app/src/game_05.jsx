@@ -81,7 +81,7 @@ function Game05() {
       <br />
       <Link
         id="comment"
-        to={`http://localhost:3000/comment/add/1`}
+        to={`http://localhost:3000/comment/add/5`}
         className="btn btn-primary"
       >
         Comment
