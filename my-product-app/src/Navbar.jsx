@@ -11,9 +11,6 @@ import Logo_YADA from "../src/img/Logo_YADA.png";
 export default function Navbar() {
   return (
     <div>
-      <title>YADASCI Board game</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -22,13 +19,6 @@ export default function Navbar() {
         href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
         rel="stylesheet"
       />
-      <link rel="stylesheet" href="Project_01.css" type="text/css" />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="bootstrap/css/bootstrap.min.css"
-      />
-
       <header>
         <nav
           className="navbar navbar-expand-lg "
@@ -54,55 +44,28 @@ export default function Navbar() {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link
-                    to="/home"
-                    className="nav-link active"
-                    aria-current="page"
-                  >
-                    หน้าหลัก
-                  </Link>
-                </li>
-                <Link to="/page01" className="nav-link">
-                  บอร์ดเกมเก่า
-                </Link>
-                <Link to="/page02" className="nav-link">
-                  บอร์ดเกมเด็ก
-                </Link>
-                <Link to="/page03" className="nav-link">
-                  ภาคเสริม
-                </Link>
-                <Link to="/page04" className="nav-link">
-                  เกมยอดนิยม
+                <Link
+                  to="/home"
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  หน้าหลัก
                 </Link>
 
-                <MDBDropdown>
-                  <MDBDropdownToggle
-                    tag="a"
-                    className="btn btn-#5B785B"
-                    style={{ fontSize: "20px" }}
-                  >
-                    เพิ่มเติม
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <Link to={"/product/add"}>
-                      <MDBDropdownItem link style={{ fontSize: "14px" }}>
-                        เพิ่มสินค้า
-                      </MDBDropdownItem>
-                    </Link>
-                    <Link to={"/report"}>
-                      <MDBDropdownItem link style={{ fontSize: "14px" }}>
-                        รายงาน
-                      </MDBDropdownItem>
-                    </Link>
-                    <Link to={"/stock"}>
-                      <MDBDropdownItem link style={{ fontSize: "14px" }}>
-                        คลังสินค้า
-                      </MDBDropdownItem>
-                    </Link>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
+                <Link to={"/stock"} className="nav-link">
+                  คลังสินค้า
+                </Link>
+                <Link to="/product_type" className="nav-link">
+                  ประเภทสินค้า
+                </Link>
+
+                <Link to=" " className="nav-link">
+                  <i class="bi bi-cart3" id="cart-icon"></i>
+                </Link>
               </ul>
+              <Link to="/user_info" className="nav-link" id="UserNav">
+                ข้อมูลผู้ใช้
+              </Link>
             </div>
           </div>
         </nav>

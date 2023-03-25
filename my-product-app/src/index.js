@@ -33,14 +33,14 @@ import Game21 from "./game_21";
 import Game22 from "./game_22";
 import Game23 from "./game_23";
 import Game24 from "./game_24";
-
-//import Home from './Home';
 import ProductDetail from "./ProductDetail";
 import Report from "./Report";
 import Stock from "./Stock";
 import ProductCart from "./ProductCart";
 import Register from "./Register";
 import Cart from "./cart";
+import UserInfo from "./user_info";
+import ProductType from "./product_type";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -87,6 +87,8 @@ root.render(
       <Route path="/game_23" element={<Game23 />} />
       <Route path="/game_24" element={<Game24 />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/user_info" element={<UserInfo />} />
+      <Route path="/product_type" element={<ProductType />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
