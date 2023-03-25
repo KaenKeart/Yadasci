@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import game_06 from "../src/img/game_06.jpg";
 import game_06_1 from "../src/img/game_06-1.jpg";
 import "./game.css";
-import "./comment.css";
 
 import { Link } from "react-router-dom";
 function Game06() {

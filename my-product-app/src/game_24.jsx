@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import game_24 from "../src/img/game_24.jpg";
 import game_24_1 from "../src/img/game_24-1.jpg";
 import "./game.css";
-import "./comment.css";
 
 import { Link } from "react-router-dom";
 function Game24() {
@@ -99,7 +98,7 @@ function Game24() {
         ใครที่อยากรับบทเป็นนักสืบถือว่าไม่ควรพลาดอย่างยิ่งเลยค่ะ
       </h3>
       <br />
-      
+
       <br />
       <Footer />
     </div>

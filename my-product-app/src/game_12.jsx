@@ -2,7 +2,6 @@ import Footer from "./footer";
 import Navbar from "./Navbar";
 import game_12 from "../src/img/game_12.jpg";
 import "./game.css";
-import "./comment.css";
 
 import { Link } from "react-router-dom";
 function Game12() {
