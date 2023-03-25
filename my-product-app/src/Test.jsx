@@ -1,10 +1,13 @@
-// import Logo_YADA from '../src/img/Logo_YADA.png'
+// import Footer from "./footer";
+// import Navbar from "./Navbar";
 
-// function Page03() {
+// function () {
+//   return (
+//     <div>
+//       <Navbar />
 
-//     return (
-//test
-
-//             )
+//       <Footer />
+//     </div>
+//   );
 // }
-// export default Page03;
+// export default ;
