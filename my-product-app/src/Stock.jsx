@@ -119,7 +119,7 @@ function Stock() {
                   <li className="nav-item">
                     <Link
                       to="/home"
-                      className="nav-link active btn"
+                      className="nav-link active"
                       aria-current="page"
                     >
                       หน้าหลัก

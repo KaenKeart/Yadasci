@@ -46,7 +46,7 @@ export default function Navbar() {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <Link
                   to="/home"
-                  className="nav-link active btn"
+                  className="nav-link active"
                   aria-current="page"
                 >
                   หน้าหลัก
