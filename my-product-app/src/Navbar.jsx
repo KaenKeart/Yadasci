@@ -13,6 +13,10 @@ export default function Navbar() {
         href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
         rel="stylesheet"
       />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+        rel="stylesheet"
+      />
       <header>
         <nav
           className="navbar navbar-expand-lg "
@@ -52,7 +56,6 @@ export default function Navbar() {
                 <Link to="/product_type" className="nav-link btn">
                   ประเภทสินค้า
                 </Link>
-
                 <Link to=" " className="nav-link btn">
                   <i class="bi bi-cart3" id="cart-icon"></i>
                 </Link>

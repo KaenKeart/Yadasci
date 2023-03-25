@@ -1,13 +1,13 @@
-// import Footer from "./footer";
-// import Navbar from "./Navbar";
+import Footer from "./footer";
+import Navbar from "./Navbar";
 
-// function () {
-//   return (
-//     <div>
-//       <Navbar />
+function Contact() {
+  return (
+    <div>
+      <Navbar />
 
-//       <Footer />
-//     </div>
-//   );
-// }
-// export default ;
+      <Footer />
+    </div>
+  );
+}
+export default Contact;
