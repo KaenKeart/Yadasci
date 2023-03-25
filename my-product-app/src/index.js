@@ -41,6 +41,7 @@ import Register from "./Register";
 import Cart from "./cart";
 import UserInfo from "./user_info";
 import ProductType from "./product_type";
+import Contact from "./Test";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -89,6 +90,7 @@ root.render(
       <Route path="/cart" element={<Cart />} />
       <Route path="/user_info" element={<UserInfo />} />
       <Route path="/product_type" element={<ProductType />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

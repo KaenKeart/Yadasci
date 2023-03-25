@@ -5,10 +5,11 @@ import Game03 from "../src/img/Game03.png";
 import Game04 from "../src/img/Game04.png";
 import Footer from "./footer";
 import Navbar from "./Navbar";
-import style from "./Project_01.css";
+import "./Project_01.css";
 import { API_GET, API_POST } from "./api";
 import ProductItem from "./Productitem";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Project() {
   const [productTypes, setProductTypes] = useState([]);
@@ -159,10 +160,22 @@ function Project() {
             >
               <rect width="100%" height="100%" fill="#5B785B" />
             </svg>
-            <strong className="me-auto">YADA</strong>
+            <strong className="me-auto">YADASCI</strong>
             <small className="text-muted">just now</small>
           </div>
-          <div className="toast-body">Welcome to YADASCI Board Game</div>
+          <div className="toast-body">
+            Welcome to YADASCI Board Game{" "}
+            <Link
+              to="/contact"
+              className="btn"
+              id="ContactUs"
+              style={{ fontSize: "10px" }}
+            >
+              Contact us
+            </Link>
+          </div>
+
+          <div class="container"></div>
         </div>
       </div>
       <Footer />

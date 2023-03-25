@@ -1,10 +1,4 @@
 import React from "react";
-import {
-  MDBDropdown,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBDropdownItem,
-} from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import Logo_YADA from "../src/img/Logo_YADA.png";
 
@@ -17,6 +11,10 @@ export default function Navbar() {
       />
       <link
         href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
         rel="stylesheet"
       />
       <header>
@@ -58,7 +56,6 @@ export default function Navbar() {
                 <Link to="/product_type" className="nav-link btn">
                   ประเภทสินค้า
                 </Link>
-
                 <Link to=" " className="nav-link btn">
                   <i class="bi bi-cart3" id="cart-icon"></i>
                 </Link>
