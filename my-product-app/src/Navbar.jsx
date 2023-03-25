@@ -55,7 +55,7 @@ export default function Navbar() {
                 <Link to={"/stock"} className="nav-link">
                   คลังสินค้า
                 </Link>
-                <Link to=" " className="nav-link">
+                <Link to="/product_type" className="nav-link">
                   ประเภทสินค้า
                 </Link>
 
