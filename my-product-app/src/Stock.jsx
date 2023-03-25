@@ -10,8 +10,7 @@ function Stock() {
   const [productTypes, setProductTypes] = useState([]);
   const [productTypeId, setProductTypeId] = useState(0);
   const [products, setProducts] = useState([]);
-  const [shouldShowDeleteButton, setShouldShowDeleteButton] = useState(true);
-  const [shouldShowEditButton, setShouldShowEditbutton] = useState(true);
+
 
   useEffect(() => {
     async function fetchData() {
