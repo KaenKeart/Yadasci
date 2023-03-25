@@ -176,7 +176,7 @@ export default function Register() {
 
           <Row className="mb-3">
             <Form.Group as={Col} controlId="validateGender">
-              <Form.Label>Gender 1.Female 2.Male 3.Unspacified </Form.Label>
+              <Form.Label>Gender </Form.Label>
               <Form.Control
                 required
                 type="text"
