@@ -99,7 +99,7 @@ app.post("/api/access_request", (req, res) => {
     var decoded = jwt.verify(authToken, "MySecretKey");
 
     if (decoded) {
-        const query = "SELECT user_id, user_name, first_name, last_name, email FROM users ";
+        const query = "SELECT user_id, user_name, first_name, last_name, email, gender FROM users";
         pool.query(query, [authenSignature], (error, results) => {
             var response;
             if (error) {
@@ -110,7 +110,7 @@ app.post("/api/access_request", (req, res) => {
             } else {
                 if (results.length) {
                     var payload = {
-                        user_id: results[0].user_id, username: results[0].username, first_name: results[0].first_name, last_name: results[0].last_name, email: results[0].email
+                        user_id: results[0].user_id, username: results[0].username, first_name: results[0].first_name, last_name: results[0].last_name, email: results[0].email, gender: results[0].gender
                     };
                     const accessToken = jwt.sign(payload, "MySecretKey");
                     response = { result: true, data: { access_token: accessToken, account_info: payload } };
@@ -268,7 +268,7 @@ app.post("/register", checkAuth, async (req, res) => {
         var result = await Product.createUsers(pool,
             input.user_name,input.user_pwd,
             input.first_name,input.last_name,
-            input.email);
+            input.email,input.gender);
 
         res.json({
             result: true

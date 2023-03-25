@@ -12,6 +12,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [validated, setValidated] = useState(false);
   const [userId, setUserId] = useState(0);
+  const [gender, setGender] = useState(0);
 
   useEffect(() => {
     async function fetchData(userId) {
@@ -25,6 +26,7 @@ export default function Register() {
       setFirstName(data.first_name);
       setLastName(data.last_name);
       setEmail(data.email);
+      setGender(data.gender);
     }
 
     if (params.userId != "add") {
@@ -80,6 +82,7 @@ export default function Register() {
         first_name: firstName,
         last_name: lastName,
         email: email,
+        gender: gender,
       }),
     });
     let json = await response.json();
@@ -170,6 +173,23 @@ export default function Register() {
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="validateGender">
+              <Form.Label>Gender 1.Female 2.Male 3.Unspacified </Form.Label>
+              <Form.Control
+                required
+                type="text"
+                value={gender}
+                placeholder="Gender"
+                onChange={(e) => setGender(e.target.value)}
+              />
+              <Form.Control.Feedback type="invalid">
+                กรุณากรอก Gender
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+          
 
           <Row className="mb-3">
             <Button variant="primary" as="input" type="submit" value="SAVE" />

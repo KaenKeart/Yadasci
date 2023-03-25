@@ -9,10 +9,10 @@ module.exports = {
         return await pool.query(sql);
     },
 
-    createUsers: async (pool, username, password, firstName, lastName, email) => {
-        var sql = "INSERT INTO users (user_name, user_pwd, first_name, last_name, email) "
-                    + "VALUES (?, ?, ?, ?, ?)";
-        sql = mysql.format(sql, [username, password, firstName, lastName, email]);
+    createUsers: async (pool, username, password, firstName, lastName, email, gender) => {
+        var sql = "INSERT INTO users (user_name, user_pwd, first_name, last_name, email , gender) "
+                    + "VALUES (?, ?, ?, ?, ?, ?)";
+        sql = mysql.format(sql, [username, password, firstName, lastName, email, gender]);
 
         return await pool.query(sql);
     },
