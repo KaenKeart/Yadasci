@@ -5,13 +5,12 @@ function FavCart() {
     <div>
       <Link
         to={"/product/cart"}
-        href="#"
         className="btn btn-primary"
         style={{ marginRight: "5px" }}
       >
         หยิบใส่ตะกร้า
       </Link>
-      <Link href="#" className="btn btn-danger" style={{ marginLeft: "5px" }}>
+      <Link className="btn btn-danger" style={{ marginLeft: "5px" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

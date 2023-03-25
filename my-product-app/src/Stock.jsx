@@ -119,31 +119,38 @@ function Stock() {
                   <li className="nav-item">
                     <Link
                       to="/home"
-                      className="nav-link active"
+                      className="nav-link active btn"
                       aria-current="page"
                     >
                       หน้าหลัก
                     </Link>
                   </li>
 
-                  <Link to={"/stock"} className="nav-link">
+                  <Link to={"/stock"} className="nav-link btn">
                     คลังสินค้า
                   </Link>
-                  <Link to="/product_type" className="nav-link">
+                  <Link to="/product_type" className="nav-link btn">
                     ประเภทสินค้า
                   </Link>
-                  <Link to={"/product/add"} className="nav-link">
+                  <Link to={"/product/add"} className="nav-link btn">
                     เพิ่มสินค้า
                   </Link>
-                  <Link to={"/report"} className="nav-link">
+                  <Link to={"/report"} className="nav-link btn">
                     รายงาน
                   </Link>
-                  <Link to=" " className="nav-link">
+                  <Link to=" " className="nav-link btn">
                     <i class="bi bi-cart3" id="cart-icon"></i>
                   </Link>
                 </ul>
-                <Link to="/user_info" className="nav-link" id="UserNav">
+                <Link to="/user_info" className="nav-link btn" id="UserNav">
                   ข้อมูลผู้ใช้
+                </Link>
+                <Link
+                  to="/"
+                  className="btn btn-danger"
+                  style={{ marginLeft: "5px" }}
+                >
+                  Logout
                 </Link>
               </div>
             </div>
