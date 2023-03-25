@@ -88,13 +88,7 @@ function Game15() {
         หรือแม้แต่ผู้ใหญ่ที่ชอบไขปัญหาก็ไว้ฝึกสมองได้อย่างดี
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/15`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

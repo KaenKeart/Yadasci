@@ -79,13 +79,7 @@ function Game04() {
         โดยตัวเกมจะมี ผู้ดำเนินเกม (ที่ไม่อยู่ฝ่ายใด) เป็นคนทำหน้าที่ดำเนินเกม
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/4`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

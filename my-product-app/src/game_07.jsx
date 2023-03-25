@@ -84,13 +84,7 @@ function Game07() {
         เป็นคนแรกที่ไปถึงช่องสุดท้ายที่อยู่ด้านบนของกระดาน
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/7`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

@@ -89,13 +89,7 @@ function Game23() {
       </h3>
 
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/23`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

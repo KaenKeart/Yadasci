@@ -96,13 +96,7 @@ function Game22() {
         ขยายกิจการได้จนมั่งคั่งมากกว่าใคร ๆ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/22`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

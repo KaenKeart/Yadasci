@@ -81,15 +81,8 @@ function Game02() {
         และการใช้อิทธิพลเหล่านี้ให้ถูกจังหวะเพื่อชัยชนะ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/2`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
-      <Footer />
       <Footer />
     </div>
   );

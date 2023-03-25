@@ -91,13 +91,7 @@ function Game11() {
         คุณก็จำเป็นต้องปกป้องเมืองอาร์คัมแห่งนี้ไว้ให้จงได้
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/11`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

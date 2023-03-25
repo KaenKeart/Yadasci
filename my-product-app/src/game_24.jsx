@@ -99,13 +99,7 @@ function Game24() {
         ใครที่อยากรับบทเป็นนักสืบถือว่าไม่ควรพลาดอย่างยิ่งเลยค่ะ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/24`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+      
       <br />
       <Footer />
     </div>

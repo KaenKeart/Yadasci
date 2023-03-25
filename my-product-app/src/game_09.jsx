@@ -93,13 +93,7 @@ function Game09() {
         และสามารถนำไปใช้เล่นร่วมกับภาคเสริมชุดอื่นๆ รวมถึงกติกาพิเศษอื่นๆได้
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/9`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

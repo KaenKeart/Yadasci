@@ -93,13 +93,7 @@ function Game17() {
         ในกองมีไว้เพื่อช่วยให้ผู้เล่นสามารถหลีกเลี่ยงหรือย้ายที่แมวระเบิดได้
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/17`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

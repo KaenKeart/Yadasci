@@ -88,13 +88,7 @@ function Game18() {
         ชึ่งปราการด่านแรกนั้นคือท่านผู้ตรวจการหน้าเลือดแห่งเมืองนอตทิงแฮม
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/18`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

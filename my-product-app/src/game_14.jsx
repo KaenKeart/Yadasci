@@ -95,13 +95,7 @@ function Game14() {
         เกมนี้ทั้งฮา ทั้งสนุก 🤗แถมยังได้ใช้จินตนาการ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/14`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

@@ -87,13 +87,6 @@ function Game01() {
         41 x 63 มม. จำนวน: 221 ซอง / 5 แพค
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/1`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
       <br />
       <Footer />
     </div>

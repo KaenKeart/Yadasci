@@ -80,15 +80,9 @@ function Game03() {
         โดยการสร้างสิ่งปลูกสร้างขนาดมหึมาที่จะยังคงตั้งตระหง่านอยู่คู่กาลเวลา
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/3`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
-      <Footer />
+
       <Footer />
     </div>
   );

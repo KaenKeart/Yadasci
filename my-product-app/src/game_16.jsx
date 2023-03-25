@@ -86,13 +86,7 @@ function Game16() {
         ก่อนที่จะถูกจับ หรือมีคนอื่นส่งตัดหน้าไปซะก่อ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/16`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

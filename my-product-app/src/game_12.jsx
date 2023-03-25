@@ -74,13 +74,7 @@ function Game12() {
         Light Green Peridot ขนาดซอง: 41 x 63 มม. จำนวน: 36 ซอง / 1 แพค
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/12`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

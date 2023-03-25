@@ -95,13 +95,7 @@ function Game06() {
         คิงฝ่ายตรงข้ามได้ จะชนะ
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/6`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

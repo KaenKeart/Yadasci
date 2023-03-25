@@ -90,13 +90,7 @@ function Game13() {
         Children’s Board Game ปี 2012 พร้อมแล้วลุย!
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/13`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

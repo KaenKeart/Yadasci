@@ -40,30 +40,6 @@ import Report from "./Report";
 import Stock from "./Stock";
 import ProductCart from "./ProductCart";
 import Register from "./Register";
-import Comment1 from "./Comment1";
-import Comment2 from "./Comment2";
-import Comment3 from "./Comment3";
-import Comment4 from "./Comment4";
-import Comment5 from "./Comment5";
-import Comment6 from "./Comment6";
-import Comment7 from "./Comment7";
-import Comment8 from "./Comment8";
-import Comment9 from "./Comment9";
-import Comment10 from "./Comment10";
-import Comment11 from "./Comment11";
-import Comment12 from "./Comment12";
-import Comment13 from "./Comment13";
-import Comment14 from "./Comment14";
-import Comment15 from "./Comment15";
-import Comment16 from "./Comment16";
-import Comment17 from "./Comment17";
-import Comment18 from "./Comment18";
-import Comment19 from "./Comment19";
-import Comment20 from "./Comment20";
-import Comment21 from "./Comment21";
-import Comment22 from "./Comment22";
-import Comment23 from "./Comment23";
-import Comment24 from "./Comment24";
 import Cart from "./cart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -79,30 +55,6 @@ root.render(
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
-      <Route path="/comment/add/1" element={<Comment1 />} />
-      <Route path="/comment/add/2" element={<Comment2 />} />
-      <Route path="/comment/add/3" element={<Comment3 />} />
-      <Route path="/comment/add/4" element={<Comment4 />} />
-      <Route path="/comment/add/5" element={<Comment5 />} />
-      <Route path="/comment/add/6" element={<Comment6 />} />
-      <Route path="/comment/add/7" element={<Comment7 />} />
-      <Route path="/comment/add/8" element={<Comment8 />} />
-      <Route path="/comment/add/9" element={<Comment9 />} />
-      <Route path="/comment/add/10" element={<Comment10 />} />
-      <Route path="/comment/add/11" element={<Comment11 />} />
-      <Route path="/comment/add/12" element={<Comment12 />} />
-      <Route path="/comment/add/13" element={<Comment13 />} />
-      <Route path="/comment/add/14" element={<Comment14 />} />
-      <Route path="/comment/add/15" element={<Comment15 />} />
-      <Route path="/comment/add/16" element={<Comment16 />} />
-      <Route path="/comment/add/17" element={<Comment17 />} />
-      <Route path="/comment/add/18" element={<Comment18 />} />
-      <Route path="/comment/add/19" element={<Comment19 />} />
-      <Route path="/comment/add/20" element={<Comment20 />} />
-      <Route path="/comment/add/21" element={<Comment21 />} />
-      <Route path="/comment/add/22" element={<Comment22 />} />
-      <Route path="/comment/add/23" element={<Comment23 />} />
-      <Route path="/comment/add/24" element={<Comment24 />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
       <Route path="/game_1" element={<Game01 />} />

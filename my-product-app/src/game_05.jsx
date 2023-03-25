@@ -79,13 +79,7 @@ function Game05() {
         ซึ่งนกแต่ละชนิดก็จะมีการเชื่อมโยงความสามารถพิเศษ ให้เราได้คะแนนมากขึ้น
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/5`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

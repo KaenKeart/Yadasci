@@ -87,13 +87,7 @@ function Game20() {
         ก็จะยิ่งเป็นเกียรติให้กับร้านค้าของเราเป็นอย่างมาก
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/20`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>

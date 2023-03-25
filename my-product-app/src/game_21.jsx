@@ -97,13 +97,7 @@ function Game21() {
         พวกเขาจะยึดพื้นที่มั่นได้สำเร็จ คุณจะแพ้! ในเกมนี้
       </h3>
       <br />
-      <Link
-        id="comment"
-        to={`http://localhost:3000/comment/add/21`}
-        className="btn btn-primary"
-      >
-        Comment
-      </Link>
+
       <br />
       <Footer />
     </div>
