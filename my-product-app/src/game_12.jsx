@@ -9,7 +9,7 @@ function Game12() {
     <div>
       <Navbar />
 
-      <img src={game_12} className="img_responsive" alt="..." />
+      <img src={game_12} width="400" height="400" alt="..." />
 
       <section id="basket">
         <form

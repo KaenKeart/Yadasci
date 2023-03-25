@@ -41,7 +41,7 @@ import Register from "./Register";
 import Cart from "./cart";
 import UserInfo from "./user_info";
 import ProductType from "./product_type";
-import Contact from "./Test";
+import Contact from "./contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
