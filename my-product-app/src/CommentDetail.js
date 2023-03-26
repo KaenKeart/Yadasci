@@ -81,7 +81,7 @@ export default function CommentDetail() {
     });
     let json = await response.json();
     if (json.result) {
-      window.location = "/CommentHome";
+      window.location = "/contact";
     }
   };
 
@@ -93,7 +93,7 @@ export default function CommentDetail() {
     });
 
     if (json.result) {
-      window.location = "/CommentHome";
+      window.location = "/contact";
     }
   };
 
