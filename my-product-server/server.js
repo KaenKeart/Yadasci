@@ -335,7 +335,7 @@ app.post("/api/comment/add", checkAuth, async (req, res) => {
   }
 });
 
-app.post("/api/comment/create", checkAuth, async (req, res) => {
+app.post("/api/comment/update", checkAuth, async (req, res) => {
   const input = req.body;
   console.log(req.body);
   try {
@@ -509,6 +509,24 @@ app.get("/api/product/:productId", async (req, res) => {
 
   try {
     var result = await Product.getByProductId(pool, productId);
+
+    res.json({
+      result: true,
+      data: result,
+    });
+  } catch (ex) {
+    res.json({
+      result: false,
+      message: ex.message,
+    });
+  }
+});
+
+app.get("/api/comment/:commentId", async (req, res) => {
+  const commentId = req.params.commentId;
+
+  try {
+    var result = await Comment.getByCommentId(pool, commentId);
 
     res.json({
       result: true,
