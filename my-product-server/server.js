@@ -5,6 +5,8 @@ var md5 = require("md5");
 const multer = require("multer");
 const path = require("path");
 const Product = require("./libs/Product");
+const Comment = require("./libs/Product");
+
 const app = express();
 const post = 8000;
 
@@ -346,7 +348,7 @@ app.post("/api/comment/add", checkAuth, async (req, res) => {
   const input = req.body;
 
   try {
-    var result = await comment.createComment(
+    var result = await Comment.createComment(
       pool,
       input.comment,
       input.comment_type_id
@@ -392,7 +394,7 @@ app.post("/register", checkAuth, async (req, res) => {
   const input = req.body;
 
   try {
-    var result = await comment.createUsers(
+    var result = await Comment.createUsers(
       pool,
       input.user_name,
       input.user_pwd,
@@ -477,7 +479,7 @@ app.get("/api/comment/:commentId", async (req, res) => {
   const commentId = req.params.commentId;
 
   try {
-    var result = await comment.getByCommentId(pool, commentId);
+    var result = await Comment.getByCommentId(pool, commentId);
 
     res.json({
       result: true,
@@ -495,7 +497,7 @@ app.post("/api/comment/update", checkAuth, async (req, res) => {
   const input = req.body;
 
   try {
-    var result = await comment.updateComment(
+    var result = await Comment.updateComment(
       pool,
       input.comment_id,
       input.comment,
@@ -517,7 +519,7 @@ app.post("/api/comment/delete", checkAuth, async (req, res) => {
   const input = req.body;
 
   try {
-    var result = await comment.deleteComment(pool, input.comment_id);
+    var result = await Comment.deleteComment(pool, input.comment_id);
 
     res.json({
       result: true,
@@ -549,7 +551,7 @@ app.get("/api/report", checkAuth, async (req, res) => {
 
 app.get("/api/report", checkAuth, async (req, res) => {
   try {
-    var result = await comment.getSumComment(pool);
+    var result = await Comment.getSumComment(pool);
 
     res.json({
       result: true,

@@ -3,15 +3,16 @@ import { API_GET, API_POST } from "./api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { SERVER_URL } from "./app.config";
 
 export default function CommentDetail() {
   let params = useParams();
 
   const [commentId, setCommentId] = useState(0);
-  const [comment, setComment] = useState("");
+  const [commentName, setCommentName] = useState("");
   const [commentTypes, setCommentTypes] = useState([]);
   const [commentTypeId, setCommentTypeId] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [stock, setStock] = useState(0);
   const [validated, setValidated] = useState(false);
 
   useEffect(() => {
@@ -38,11 +39,13 @@ export default function CommentDetail() {
       var data = json.data[0];
 
       setCommentId(data.comment_id);
-      setComment(data.comment);
+      setCommentName(data.comment_name);
       setCommentTypeId(data.comment_type_id);
+      setPrice(data.price);
+      setStock(data.stock);
     }
 
-    if (params.commentId != "add") {
+    if (params.commentId !== "add") {
       fetchData([params.commentId]);
     }
   }, [params.commentId]);
@@ -56,26 +59,29 @@ export default function CommentDetail() {
         Authorization: "Bearer " + localStorage.getItem("access_token"),
       },
       body: JSON.stringify({
-        comment_id: commentId,
-        comment: comment,
+        comment_name: commentName,
         comment_type_id: commentTypeId,
+        price: price,
+        stock: stock,
       }),
     });
     let json = await response.json();
     if (json.result) {
-      window.location = "/contact";
+      window.location = "/CommentHome";
     }
   };
 
   const doUpdateComment = async () => {
     const json = await API_POST("comment/update", {
       comment_id: commentId,
-      comment: comment,
+      comment_name: commentName,
       comment_type_id: commentTypeId,
+      price: price,
+      stock: stock,
     });
 
     if (json.result) {
-      window.location = "/contact";
+      window.location = "/CommentHome";
     }
   };
 
@@ -86,7 +92,7 @@ export default function CommentDetail() {
     if (form.checkValidity() === false) {
       event.stopPropagation();
     } else {
-      if (params.commentId == "add") {
+      if (params.commentId === "add") {
         doCreateComment();
       } else {
         doUpdateComment();
@@ -98,44 +104,44 @@ export default function CommentDetail() {
 
   return (
     <>
-      <div id="CommentDetail" className="container m-auto">
+      <div className="container m-auto">
         <Form noValidate validated={validated} onSubmit={onSave}>
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="validateComment">
-              <Form.Label>Comment</Form.Label>
+            <Form.Group as={Col} controlId="validateCommentName">
+              <Form.Label>ชื่อสินค้า</Form.Label>
               <Form.Control
                 required
                 type="text"
-                value={comment}
-                placeholder="Comment"
-                onChange={(e) => setComment(e.target.value)}
+                value={commentName}
+                placeholder="ชื่อสินค้า"
+                onChange={(e) => setCommentName(e.target.value)}
               />
               <Form.Control.Feedback type="invalid">
-                กรุณากรอก Comment
+                กรุณากรอก ชื่อสินค้า
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="validateComment">
-              <Form.Label>ความพึงพอใจ</Form.Label>
+            <Form.Group as={Col} controlId="validateCommentName">
+              <Form.Label>ประเภทสินค้า</Form.Label>
               <Form.Select
                 value={commentTypeId}
                 onChange={(e) => setCommentTypeId(e.target.value)}
                 required
               >
-                <option label="ระดับความพึงพอใจ"></option>
+                <option label="กรุณาเลือกประเภทสินค้า"></option>
                 {commentTypes.map((item) => (
                   <option
                     key={item.comment_type_id}
                     value={item.comment_type_id}
                   >
-                    {item.comment_type}
+                    {item.comment_type_name}
                   </option>
                 ))}
               </Form.Select>
               <Form.Control.Feedback type="invalid">
-                กรุณากรอก เลือกระดับความพงพอใจ
+                กรุณากรอก ประเภทสินค้า
               </Form.Control.Feedback>
             </Form.Group>
           </Row>

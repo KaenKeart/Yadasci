@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { API_GET, API_POST } from "./api";
-import ProductItem from "./Productitem";
+import Commentitem from "./Commentitem";
 
-export default function Home() {
-  const [productTypes, setProductTypes] = useState([]);
-  const [productTypeId, setProductTypeId] = useState(0);
-  const [products, setProducts] = useState([]);
+export default function CommentHome() {
+  const [commentTypes, setCommentTypes] = useState([]);
+  const [commentTypeId, setCommentTypeId] = useState(0);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:8080/api/product_types", {
+      const response = await fetch("http://localhost:8000/api/comment_types", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -20,7 +20,7 @@ export default function Home() {
       });
 
       let json = await response.json();
-      setProductTypes(json.data);
+      setCommentTypes(json.data);
     }
 
     fetchData();
@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        "http://localhost:8080/api/products/type/" + productTypeId,
+        "http://localhost:8000/api/comments/type/" + commentTypeId,
         {
           method: "GET",
           headers: {
@@ -41,24 +41,24 @@ export default function Home() {
       );
 
       const json = await response.json();
-      setProducts(json.data);
+      setComments(json.data);
     }
 
     fetchData();
-  }, [productTypeId]);
+  }, [commentTypeId]);
 
-  const fetchProducts = async () => {
-    let json = await API_GET("products/type/" + productTypeId);
-    setProducts(json.data);
+  const fetchComments = async () => {
+    let json = await API_GET("comments/type/" + commentTypeId);
+    setComments(json.data);
   };
 
   const onDelete = async (data) => {
-    let json = await API_POST("product/delete", {
-      product_id: data.product_id,
+    let json = await API_POST("comment/delete", {
+      comment_id: data.comment_id,
     });
 
     if (json.result) {
-      fetchProducts();
+      fetchComments();
     }
   };
 
@@ -66,18 +66,18 @@ export default function Home() {
     return (
       <div className="container">
         <select
-          value={productTypeId}
-          onChange={(e) => setProductTypeId(e.target.value)}
+          value={commentTypeId}
+          onChange={(e) => setCommentTypeId(e.target.value)}
         >
           <option value={0}>ทุกประเภทสินค้า</option>
-          {productTypes.map((item) => (
-            <option key={item.product_type_id} value={item.product_type_id}>
-              {item.product_type_name}
+          {commentTypes.map((item) => (
+            <option key={item.comment_type_id} value={item.comment_type_id}>
+              {item.comment_type_name}
             </option>
           ))}
         </select>
 
-        <Link to={"/product/add"} className="btn btn-outline-primary me-3">
+        <Link to={"/comment/add"} className="btn btn-outline-primary me-3">
           เพิ่ม
         </Link>
 
@@ -86,9 +86,9 @@ export default function Home() {
         </Link>
 
         <div className="container mt-3">
-          {products.map((item) => (
-            <ProductItem
-              key={item.product_id}
+          {comments.map((item) => (
+            <Commentitem
+              key={item.comment_id}
               data={item}
               onDelete={onDelete}
             />
