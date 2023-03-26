@@ -11,7 +11,7 @@ export default function Comment(props) {
       <Link to={`/game_${props.data.comment_id}`}>
         {" "}
         <img
-          src={`http://localhost:8000/images/${props.data.image_url}`}
+          src={`http://localhost:8080/images/${props.data.image_url}`}
           alt="..."
           width={286}
           height={250}
