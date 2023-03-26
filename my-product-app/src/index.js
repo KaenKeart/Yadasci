@@ -34,7 +34,6 @@ import Game22 from "./game_22";
 import Game23 from "./game_23";
 import Game24 from "./game_24";
 import ProductDetail from "./ProductDetail";
-import CommentDetail from "./CommentDetail";
 import Report from "./Report";
 import Stock from "./Stock";
 import ProductCart from "./ProductCart";
@@ -43,7 +42,7 @@ import Cart from "./cart";
 import UserInfo from "./user_info";
 import ProductType from "./product_type";
 import Contact from "./contact";
-import CommentHome from "./CommentHome";
+import ContactDetail from "./ContactDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -52,13 +51,12 @@ root.render(
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Project />} />
-      <Route path="/CommentHome" element={<CommentHome />} />
       <Route path="/page01" element={<Page01 />} />
       <Route path="/page02" element={<Page02 />} />
       <Route path="/page03" element={<Page03 />} />
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
-      <Route path="/comment/add" element={<CommentDetail />} />
+      <Route path="/contact/:contactId" element={<ContactDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
