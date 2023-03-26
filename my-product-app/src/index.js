@@ -34,6 +34,7 @@ import Game22 from "./game_22";
 import Game23 from "./game_23";
 import Game24 from "./game_24";
 import ProductDetail from "./ProductDetail";
+import CommentDetail from "./CommentDetail";
 import Report from "./Report";
 import Stock from "./Stock";
 import ProductCart from "./ProductCart";
@@ -55,6 +56,7 @@ root.render(
       <Route path="/page03" element={<Page03 />} />
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
+      <Route path="/comment/add" element={<CommentDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
       <Route path="stock" element={<Stock />} />
