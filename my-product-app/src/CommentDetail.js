@@ -11,9 +11,27 @@ export default function CommentDetail() {
   const [commentName, setCommentName] = useState("");
   const [commentTypes, setCommentTypes] = useState([]);
   const [commentTypeId, setCommentTypeId] = useState(0);
-  const [price, setPrice] = useState(0);
-  const [stock, setStock] = useState(0);
   const [validated, setValidated] = useState(false);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:8000/api/comment_types", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("access_token"),
+        },
+      });
+
+      let json = await response.json();
+      setCommentTypes(json.data);
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -41,8 +59,6 @@ export default function CommentDetail() {
       setCommentId(data.comment_id);
       setCommentName(data.comment_name);
       setCommentTypeId(data.comment_type_id);
-      setPrice(data.price);
-      setStock(data.stock);
     }
 
     if (params.commentId !== "add") {
@@ -61,8 +77,6 @@ export default function CommentDetail() {
       body: JSON.stringify({
         comment_name: commentName,
         comment_type_id: commentTypeId,
-        price: price,
-        stock: stock,
       }),
     });
     let json = await response.json();
@@ -76,8 +90,6 @@ export default function CommentDetail() {
       comment_id: commentId,
       comment_name: commentName,
       comment_type_id: commentTypeId,
-      price: price,
-      stock: stock,
     });
 
     if (json.result) {
@@ -108,40 +120,42 @@ export default function CommentDetail() {
         <Form noValidate validated={validated} onSubmit={onSave}>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="validateCommentName">
-              <Form.Label>ชื่อสินค้า</Form.Label>
+              <Form.Label>Comment</Form.Label>
               <Form.Control
                 required
                 type="text"
                 value={commentName}
-                placeholder="ชื่อสินค้า"
+                placeholder="Comment"
                 onChange={(e) => setCommentName(e.target.value)}
               />
               <Form.Control.Feedback type="invalid">
-                กรุณากรอก ชื่อสินค้า
+                กรุณากรอก Comment
               </Form.Control.Feedback>
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
             <Form.Group as={Col} controlId="validateCommentName">
-              <Form.Label>ประเภทสินค้า</Form.Label>
+              <Form.Label>ความพึงพอใจ</Form.Label>
               <Form.Select
                 value={commentTypeId}
                 onChange={(e) => setCommentTypeId(e.target.value)}
                 required
               >
-                <option label="กรุณาเลือกประเภทสินค้า"></option>
-                {commentTypes.map((item) => (
-                  <option
-                    key={item.comment_type_id}
-                    value={item.comment_type_id}
-                  >
-                    {item.comment_type_name}
-                  </option>
-                ))}
+                <option label="ความพึงพอใจ"></option>
+                {!loading &&
+                  commentTypes &&
+                  commentTypes.map((item) => (
+                    <option
+                      key={item.comment_type_id}
+                      value={item.comment_type_id}
+                    >
+                      {item.comment_type_name}
+                    </option>
+                  ))}
               </Form.Select>
               <Form.Control.Feedback type="invalid">
-                กรุณากรอก ประเภทสินค้า
+                กรุณากรอก ความพึงพอใจ
               </Form.Control.Feedback>
             </Form.Group>
           </Row>

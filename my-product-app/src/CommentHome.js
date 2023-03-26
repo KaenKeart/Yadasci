@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import { API_GET, API_POST } from "./api";
 import Commentitem from "./Commentitem";
 
-export default function CommentHome() {
+export default function CommentHome(props) {
   const [commentTypes, setCommentTypes] = useState([]);
   const [commentTypeId, setCommentTypeId] = useState(0);
   const [comments, setComments] = useState([]);

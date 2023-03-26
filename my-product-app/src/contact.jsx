@@ -1,66 +1,112 @@
 import Footer from "./footer";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import "./contact.css";
-import Contactitem from "./Contactitem";
-import { useEffect, useState } from "react";
-import { API_GET } from "./api";
-import { useParams } from "react-router-dom";
 
-export default function Contact(props) {
-  let params = useParams();
-  const [contactId, setContactId] = useState(0);
-  const [contactnick, setContactNick] = useState("");
-  const [contactname, setContactName] = useState("");
-  const [studentId, setStudentId] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [contacts, setContacts] = useState([]);
+import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+import { API_GET, API_POST } from "./api";
+import Commentitem from "./Commentitem";
+
+export default function CommentHome(props) {
+  const [commentTypes, setCommentTypes] = useState([]);
+  const [commentTypeId, setCommentTypeId] = useState(0);
+  const [comments, setComments] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:8000/api/contact", {
+      const response = await fetch("http://localhost:8000/api/comment_types", {
         method: "GET",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          "content-Type": "application/json",
           Authorization: "Bearer " + localStorage.getItem("access_token"),
         },
       });
 
       let json = await response.json();
-      setContacts(json.data);
+      setCommentTypes(json.data);
     }
-    console.log(contacts);
+
     fetchData();
   }, []);
 
   useEffect(() => {
-    async function fetchData(contactId) {
-      let json = await API_GET("contact/" + contactId);
+    async function fetchData() {
+      const response = await fetch(
+        "http://localhost:8000/api/comments/type/" + commentTypeId,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("access_token"),
+          },
+        }
+      );
 
-      var data = json.data[0];
-
-      //setContactId(data.contact_id);
-      setContactNick(data.contact_nickname);
-      setContactName(data.contact_name);
-      setStudentId(data.student_id);
-      setImageUrl(data.image_url);
+      const json = await response.json();
+      setComments(json.data);
     }
 
-    if (params.contactId != "add") {
-      fetchData([params.contactId]);
-    }
-  }, [params.contactId]);
+    fetchData();
+  }, [commentTypeId]);
 
+  const fetchComments = async () => {
+    let json = await API_GET("comments/type/" + commentTypeId);
+    setComments(json.data);
+  };
 
-  return (
-    <div>
-      <Navbar />
-      <div className="container mt-3">
-    {contacts.map((k) => (
-      <Contactitem key={k.contactId} data={k} />
-    ))
+  const onDelete = async (data) => {
+    let json = await API_POST("comment/delete", {
+      comment_id: data.comment_id,
+    });
+
+    if (json.result) {
+      fetchComments();
     }
-  </div>
-      <Footer />
-    </div>
-  );
+  };
+
+  if (localStorage.getItem("access_token")) {
+    return (
+      <div className="container">
+        <Navbar />
+        <Link to={"/comment/add"} className="nav-link btn">
+          เพิ่มสินค้า
+        </Link>
+        <select
+          value={commentTypeId}
+          onChange={(e) => setCommentTypeId(e.target.value)}
+        >
+          <option value={0}>ทุกประเภทสินค้า</option>
+          {commentTypes.map((item) => (
+            <option key={item.comment_type_id} value={item.comment_type_id}>
+              {item.comment_type_name}
+            </option>
+          ))}
+        </select>
+
+        <Link to={"/comment/add"} className="btn btn-outline-primary me-3">
+          เพิ่ม
+        </Link>
+
+        <Link to={"/report"} className="btn btn-outline-primary me-3">
+          รายงาน
+        </Link>
+
+        <div className="container mt-3">
+          {comments.map((item) => (
+            <Commentitem
+              key={item.comment_id}
+              data={item}
+              onDelete={onDelete}
+            />
+          ))}
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  return <Navigate to="/" replace />;
 }

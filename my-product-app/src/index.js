@@ -43,6 +43,7 @@ import UserInfo from "./user_info";
 import ProductType from "./product_type";
 import Contact from "./contact";
 import ContactDetail from "./ContactDetail";
+import CommentDetail from "./CommentDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -56,6 +57,8 @@ root.render(
       <Route path="/page03" element={<Page03 />} />
       <Route path="/page04" element={<Page04 />} />
       <Route path="/product/:productId" element={<ProductDetail />} />
+      <Route path="/comment/add" element={<CommentDetail />} />
+
       <Route path="/contact/:contactId" element={<ContactDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
       <Route path="report" element={<Report />} />

@@ -3,7 +3,6 @@ import { API_GET, API_POST } from "./api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Col, Form, Row } from "react-bootstrap";
-import { SERVER_URL } from "./app.config";
 
 export default function ProductDetail() {
   let params = useParams();
@@ -15,8 +14,6 @@ export default function ProductDetail() {
   const [price, setPrice] = useState(0);
   const [stock, setStock] = useState(0);
   const [validated, setValidated] = useState(false);
-  const [imageUrl, setImageUrl] = useState("");
-  const [selectedFile, setSelectedFile] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -46,62 +43,12 @@ export default function ProductDetail() {
       setProductTypeId(data.product_type_id);
       setPrice(data.price);
       setStock(data.stock);
-      setImageUrl(data.image_url);
     }
 
     if (params.productId != "add") {
       fetchData([params.productId]);
     }
   }, [params.productId]);
-
-  const onFileSelected = (e) => {
-    if (e.target.files.length > 0) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
-  const onUploadImage = async () => {
-    const formData = new FormData();
-    formData.append("file", selectedFile);
-
-    let response = await fetch(SERVER_URL + "api/product/upload/" + productId, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        Authorization: "Bearer " + localStorage.getItem("access_token"),
-      },
-      body: formData,
-    });
-
-    let json = await response.json();
-
-    setImageUrl(json.data);
-  };
-
-  const getImageComponent = () => {
-    return (
-      <div className="container m-auto">
-        <Form>
-          <Row>
-            <Form.Group as={Col} md="3" controlId="formImage" className="mb-3">
-              <img
-                src={`${SERVER_URL}images/${imageUrl}`}
-                width={150}
-                alt="Upload status"
-              />
-            </Form.Group>
-            <Form.Group as={Col} md="9" controlId="formFile" className="mb-3">
-              <Form.Label>เลือกรูปภาพ</Form.Label>
-              <Form.Control type="file" name="file" onChange={onFileSelected} />
-              <Button type="button" className="mt-3" onClick={onUploadImage}>
-                Upload
-              </Button>
-            </Form.Group>
-          </Row>
-        </Form>
-      </div>
-    );
-  };
 
   const doCreateProduct = async () => {
     const response = await fetch("http://localhost:8000/api/product/add", {
@@ -157,8 +104,6 @@ export default function ProductDetail() {
 
   return (
     <>
-      {params.productId != "add" ? getImageComponent() : <></>}
-
       <div id="ProductDetail" className="container m-auto">
         <Form noValidate validated={validated} onSubmit={onSave}>
           <Row className="mb-3">

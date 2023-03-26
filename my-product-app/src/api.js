@@ -16,6 +16,7 @@ export async function API_GET(url) {
 }
 
 export async function API_POST(url, data) {
+  console.log("test");
   const response = await fetch(SERVER_URL + "api/" + url, {
     method: "POST",
     headers: {
@@ -25,7 +26,7 @@ export async function API_POST(url, data) {
     },
     body: JSON.stringify(data),
   });
-
+  console.log(response);
   let json = await response.json();
 
   return json;
