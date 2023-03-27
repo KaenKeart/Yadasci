@@ -24,7 +24,7 @@ export default function Contact() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:8080/api/contact", {
+      const response = await fetch("http://localhost:8000/api/contact", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -43,7 +43,7 @@ export default function Contact() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        "http://localhost:8080/api/contact" + contactId,
+        "http://localhost:8000/api/contact" + contactId,
         {
           method: "GET",
           headers: {
