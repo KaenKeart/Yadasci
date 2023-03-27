@@ -65,7 +65,7 @@ root.render(
       <Route path="/contact/:contactId" element={<ContactDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
-      <Route path="ReportComment" element={<ReportComment />} />
+      <Route path="/ReportComment" element={<ReportComment />} />
 
       <Route path="stock" element={<Stock />} />
       <Route path="/game_1" element={<Game01 />} />

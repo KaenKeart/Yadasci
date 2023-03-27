@@ -145,7 +145,7 @@ export default function Contact() {
           เพิ่ม
         </Link>
 
-        <Link to={"/report"} className="btn btn-outline-primary me-3">
+        <Link to={"/ReportComment"} className="btn btn-outline-primary me-3">
           รายงาน
         </Link>
 
