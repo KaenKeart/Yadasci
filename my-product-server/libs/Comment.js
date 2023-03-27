@@ -34,13 +34,6 @@ module.exports = {
     return await pool.query(sql);
   },
 
-  updateImage: async (pool, commentId, fileName) => {
-    var sql = "UPDATE comments SET image_url = ? " + "WHERE comment_id = ?";
-    sql = mysql.format(sql, [fileName, commentId]);
-
-    return await pool.query(sql);
-  },
-
   getSumComment: async (pool) => {
     var sql =
       "SELECT a.comment_type_id," +

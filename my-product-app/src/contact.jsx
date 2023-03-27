@@ -6,9 +6,9 @@ import "./contact.css";
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { API_GET, API_POST } from "./api";
-import Commentitem from "./Commentitem";
+import CommentItem from "./Commentitem";
 
-export default function CommentHome(props) {
+export default function CommentHome() {
   const [commentTypes, setCommentTypes] = useState([]);
   const [commentTypeId, setCommentTypeId] = useState(0);
   const [comments, setComments] = useState([]);
@@ -96,7 +96,7 @@ export default function CommentHome(props) {
 
         <div className="container mt-3">
           {comments.map((item) => (
-            <Commentitem
+            <CommentItem
               key={item.comment_id}
               data={item}
               onDelete={onDelete}

@@ -4,6 +4,7 @@ export default function CommentItem(props) {
   const onDelete = async () => {
     props.onDelete(props.data);
   };
+  console.log("props.data:", props.data);
 
   return (
     <div className="row border rounded shadow-sm mt-3">
