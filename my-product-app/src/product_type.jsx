@@ -133,7 +133,7 @@ function ProductType() {
                   <Link to={"/product/add"} className="nav-link btn">
                     เพิ่มสินค้า
                   </Link>
-                  <Link to={"/report"} className="nav-link btn">
+                  <Link to={"/ReportproductType"} className="nav-link btn">
                     รายงาน
                   </Link>
                   <Link to=" " className="nav-link btn">

@@ -29,7 +29,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "รายงานจำนวนสินค้า",
+      text: "รายงานจำนวนสินค้าทั้งหมด",
     },
   },
 };
@@ -102,8 +102,10 @@ export default function Report() {
 
   return (
     <>
-      <div className="container-fluid mt-3">{getChart()}</div>
-
+<div className="container-fluid mt-3">
+        <div>Total Stock: {store.reduce((sum, item) => sum + item.product_count, 0)}</div> 
+        {getChart()}
+      </div>
       <div className="container-fluid mt-3">
         {productStore.map((item) => (
           <ProductItem key={item.product_id} data={item} />

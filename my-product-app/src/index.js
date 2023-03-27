@@ -47,6 +47,7 @@ import CommentDetail from "./CommentDetail";
 import User from "./User";
 import UserDetail from "./UserDetail";
 import ReportComment from "./ReportComment";
+import ReportProductType from "./ReportProductTypes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -103,7 +104,7 @@ root.render(
       <Route path="/contact" element={<Contact />} />
       <Route path="/ContactDetail" element={<ContactDetail />} />
       <Route path="/user/:userId" element={<UserDetail />} />
-
+      <Route path="/ReportproductType" element={<ReportProductType />} />
       <Route path="/user" element={<User />} />
     </Routes>
   </BrowserRouter>,
