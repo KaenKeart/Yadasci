@@ -46,6 +46,7 @@ import ContactDetail from "./ContactDetail";
 import CommentDetail from "./CommentDetail";
 import User from "./User";
 import UserDetail from "./UserDetail";
+import ReportComment from "./ReportComment";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -64,6 +65,8 @@ root.render(
       <Route path="/contact/:contactId" element={<ContactDetail />} />
       <Route path="/product/cart" element={<ProductCart />} />
       <Route path="report" element={<Report />} />
+      <Route path="ReportComment" element={<ReportComment />} />
+
       <Route path="stock" element={<Stock />} />
       <Route path="/game_1" element={<Game01 />} />
       <Route path="/game_2" element={<Game02 />} />
@@ -99,10 +102,9 @@ root.render(
       <Route path="/product_type" element={<ProductType />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/ContactDetail" element={<ContactDetail />} />
-      <Route path="/api/user" element={<User />} />
-      <Route path="/api/user/:userId" element={<UserDetail />} />
+      <Route path="/user/:userId" element={<UserDetail />} />
 
-      <Route path="/api/user" element={<User />} />
+      <Route path="/user" element={<User />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

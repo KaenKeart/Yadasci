@@ -69,7 +69,14 @@ function ProductType() {
       <table>
         <tr>
           <td>
-            <div className="container mt-3">
+            <div id="type1" className="container mt-3">
+              <h1 className="text-center">
+                <span style={{ color: "#000000" }}>
+                  <i class="bi bi-stars"></i>
+                  บอร์ดเกม
+                </span>
+                <span style={{ color: "#5B785B" }}>เด็ก</span>
+              </h1>
               {products
                 .filter((item) => [1].includes(item.product_type_id))
                 .map((item) => (
@@ -77,19 +84,7 @@ function ProductType() {
                     key={item.product_type_id}
                     data={item}
                     onDelete={onDelete}
-                  />
-                ))}
-            </div>
-          </td>
-          <td>
-            <div className="container mt-3">
-              {products
-                .filter((item) => [2].includes(item.product_type_id))
-                .map((item) => (
-                  <ProductItem
-                    key={item.product_type_id}
-                    data={item}
-                    onDelete={onDelete}
+                    showButtons={true}
                   />
                 ))}
             </div>
@@ -97,7 +92,38 @@ function ProductType() {
         </tr>
         <tr>
           <td>
-            <div className="container mt-3">
+            <div id="type2" className="container mt-3">
+              <h1 className="text-center">
+                <span style={{ color: "#000000" }}>
+                  <i class="bi bi-stars"></i>
+                  บอร์ดเกม
+                </span>
+                <span style={{ color: "#5B785B" }}>ภาคเสริม</span>
+              </h1>
+              {products
+                .filter((item) => [2].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                    showButtons={true}
+                  />
+                ))}
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div id="type3" className="container mt-3">
+              <h1 className="text-center">
+                <span style={{ color: "#000000" }}>
+                  <i class="bi bi-stars"></i>
+                  บอร์ดเกม
+                </span>
+                <span style={{ color: "#5B785B" }}>เก่า</span>
+              </h1>
               {products
                 .filter((item) => [3].includes(item.product_type_id))
                 .map((item) => (
@@ -105,12 +131,22 @@ function ProductType() {
                     key={item.product_type_id}
                     data={item}
                     onDelete={onDelete}
+                    showButtons={true}
                   />
                 ))}
             </div>
           </td>
+        </tr>
+        <tr>
           <td>
-            <div className="container mt-3">
+            <div id="type4" className="container mt-3">
+              <h1 className="text-center">
+                <span style={{ color: "#000000" }}>
+                  <i class="bi bi-stars"></i>
+                  บอร์ดเกม
+                </span>
+                <span style={{ color: "#5B785B" }}>ยอดนิยม</span>
+              </h1>
               {products
                 .filter((item) => [4].includes(item.product_type_id))
                 .map((item) => (
@@ -118,12 +154,39 @@ function ProductType() {
                     key={item.product_type_id}
                     data={item}
                     onDelete={onDelete}
+                    showButtons={true}
+                  />
+                ))}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="type4" className="container mt-3">
+              <h1 className="text-center">
+                <span style={{ color: "#000000" }}>
+                  <i class="bi bi-stars"></i>
+                  บอร์ดเกม
+                </span>
+                <span style={{ color: "#5B785B" }}>มาใหม่</span>
+              </h1>
+              {products
+                .filter((item) => [5].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                    showButtons={true}
                   />
                 ))}
             </div>
           </td>
         </tr>
       </table>
+      <br />
+      <br />
+
       <Footer />
     </div>
   );

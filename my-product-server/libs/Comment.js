@@ -16,13 +16,14 @@ module.exports = {
     return await pool.query(sql);
   },
 
-  updateComment: async (pool, commentId, commentName, commentTypeId) => {
+  updateComment: async (pool, commentId, commentName, commentTypeId, stock) => {
     var sql =
       "UPDATE comments SET " +
       "comment_name=?," +
       "comment_type_id=?," +
+      "stock= 1," +
       "WHERE comment_id = ?";
-    sql = mysql.format(sql, [commentName, commentTypeId, commentId]);
+    sql = mysql.format(sql, [commentName, commentTypeId, commentId, stock]);
 
     return await pool.query(sql);
   },
