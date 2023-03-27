@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { API_GET, API_POST } from "./api";
 import CommentItem from "./Commentitem";
-import Contactitem from "./Contactitem";
+import ContactItem from "./Contactitem";
 import { useParams } from "react-router-dom";
 
 export default function Contact() {
@@ -126,7 +126,7 @@ export default function Contact() {
         <Navbar />
         <div className="container mt-3">
           {contacts.map((item) => (
-            <Contactitem key={item.contactId} data={item} />
+            <ContactItem key={item.contactId} data={item} />
           ))}
         </div>
         <select

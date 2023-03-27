@@ -98,7 +98,7 @@ root.render(
       <Route path="/user_info" element={<UserInfo />} />
       <Route path="/product_type" element={<ProductType />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/contact" element={<ContactDetail />} />
+      <Route path="/ContactDetail" element={<ContactDetail />} />
       <Route path="/api/user" element={<User />} />
       <Route path="/api/user/:userId" element={<UserDetail />} />
 
