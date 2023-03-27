@@ -44,6 +44,8 @@ import ProductType from "./product_type";
 import Contact from "./contact";
 import ContactDetail from "./ContactDetail";
 import CommentDetail from "./CommentDetail";
+import User from "./User";
+import UserDetail from "./UserDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -96,6 +98,11 @@ root.render(
       <Route path="/user_info" element={<UserInfo />} />
       <Route path="/product_type" element={<ProductType />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/contact" element={<ContactDetail />} />
+      <Route path="/api/user" element={<User />} />
+      <Route path="/api/user/:userId" element={<UserDetail />} />
+
+      <Route path="/api/user" element={<User />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

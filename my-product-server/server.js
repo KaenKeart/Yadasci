@@ -632,3 +632,63 @@ app.get("/api/report", checkAuth, async (req, res) => {
     });
   }
 });
+
+app.post("/api/user/delete", checkAuth, async (req, res) => {
+  const input = req.body;
+
+  try {
+    var result = await User.deleteUser(pool, input.user_id);
+
+    res.json({
+      result: true,
+    });
+  } catch (ex) {
+    res.json({
+      result: false,
+      message: ex.message,
+    });
+  }
+});
+
+app.get("/api/user/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    var result = await User.getByUserId(pool, userId);
+
+    res.json({
+      result: true,
+      data: result,
+    });
+  } catch (ex) {
+    res.json({
+      result: false,
+      message: ex.message,
+    });
+  }
+});
+
+app.post("/api/user/update/:userId", checkAuth, async (req, res) => {
+  const input = req.body;
+
+  try {
+    var result = await User.updateUser(
+      pool,
+      input.user_id,
+      input.user_name,
+      input.user_pwd,
+      input.first_name,
+      input.last_name,
+      input.email,
+      input.gender
+    );
+
+    res.json({
+      result: true,
+    });
+  } catch (ex) {
+    res.json({
+      result: false,
+      message: ex.message,
+    });
+  }
+});

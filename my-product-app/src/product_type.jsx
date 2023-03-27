@@ -10,7 +10,6 @@ function ProductType() {
   const [productTypeId, setProductTypeId] = useState(0);
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("http://localhost:8000/api/product_types", {
@@ -67,16 +66,64 @@ function ProductType() {
   return (
     <div>
       <Navbar />
-      <div className="container mt-3">
-        {products.map((item) => (
-          <ProductItem
-            key={item.product_id}
-            data={item}
-            onDelete={onDelete}
-            showButtons={true}
-          />
-        ))}
-      </div>
+      <table>
+        <tr>
+          <td>
+            <div className="container mt-3">
+              {products
+                .filter((item) => [1].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                  />
+                ))}
+            </div>
+          </td>
+          <td>
+            <div className="container mt-3">
+              {products
+                .filter((item) => [2].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                  />
+                ))}
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div className="container mt-3">
+              {products
+                .filter((item) => [3].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                  />
+                ))}
+            </div>
+          </td>
+          <td>
+            <div className="container mt-3">
+              {products
+                .filter((item) => [4].includes(item.product_type_id))
+                .map((item) => (
+                  <ProductItem
+                    key={item.product_type_id}
+                    data={item}
+                    onDelete={onDelete}
+                  />
+                ))}
+            </div>
+          </td>
+        </tr>
+      </table>
       <Footer />
     </div>
   );
