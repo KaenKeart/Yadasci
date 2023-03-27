@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_GET } from "./api";
-import Contactitem from "./Contactitem";
+import ContactItem from "./Contactitem";
 import Footer from "./footer";
 import Navbar from "./Navbar";
 
@@ -54,7 +54,7 @@ export default function ContactDetail() {
       <Navbar />
       <div className="container mt-3">
         {contacts.map((contact) => (
-          <Contactitem key={contact.contact_id} data={contact} />
+          <ContactItem key={contact.contact_id} data={contact} />
         ))}
       </div>
       <Footer />
