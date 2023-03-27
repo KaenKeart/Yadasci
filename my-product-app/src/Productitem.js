@@ -34,7 +34,7 @@ export default function ProductItem(props) {
           </h6>
         </Link>
 
-        <div className="text-end text-danger">{props.data.price} ราคา</div>
+        <div className="text-end text-danger">{props.data.price}</div>
         {!props.showButtons && (
           <>
             <FavCart />
