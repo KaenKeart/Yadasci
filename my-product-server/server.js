@@ -6,6 +6,7 @@ const multer = require("multer");
 const path = require("path");
 const Product = require("./libs/Product");
 const Contact = require("./libs/Contact");
+const User = require("./libs/User");
 const Comment = require("./libs/Comment");
 
 const app = express();
@@ -483,7 +484,7 @@ app.post("/register", checkAuth, async (req, res) => {
   const input = req.body;
 
   try {
-    var result = await Product.createUsers(
+    var result = await User.createUsers(
       pool,
       input.user_name,
       input.user_pwd,
