@@ -9,18 +9,18 @@ import { API_GET, API_POST } from "./api";
 import CommentItem from "./Commentitem";
 import ContactItem from "./Contactitem";
 import { useParams } from "react-router-dom";
+import ProductItem from "./Productitem";
 
-export default function Contact() {
+export default function Contact(props) {
   let params = useParams();
   const [commentTypes, setCommentTypes] = useState([]);
   const [commentTypeId, setCommentTypeId] = useState(0);
   const [comments, setComments] = useState([]);
   const [contactId, setContactId] = useState(0);
-  const [contactnickname, setContactNickName] = useState("");
-  const [contactname, setContactName] = useState("");
-  const [studentId, setStudentId] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
   const [contacts, setContacts] = useState([]);
+  const [productTypes, setProductTypes] = useState([]);
+  const [productTypeId, setProductTypeId] = useState(0);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -100,10 +100,44 @@ export default function Contact() {
     fetchData();
   }, [commentTypeId]);
 
-  const fetchContacts = async () => {
-    let json = await API_GET("Contact/type/" + contactId);
-    setContacts(json.data);
-  };
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:8000/api/product_types", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("access_token"),
+        },
+      });
+
+      let json = await response.json();
+      setProductTypes(json.data);
+    }
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        "http://localhost:8000/api/products/type/" + productTypeId,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("access_token"),
+          },
+        }
+      );
+
+      const json = await response.json();
+      setProducts(json.data);
+    }
+
+    fetchData();
+  }, [productTypeId]);
 
   const fetchComments = async () => {
     let json = await API_GET("comments/type/" + commentTypeId);
@@ -120,33 +154,77 @@ export default function Contact() {
     }
   };
 
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("http://localhost:8000/api/product_types", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("access_token"),
+        },
+      });
+
+      let json = await response.json();
+      setProductTypes(json.data);
+    }
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        "http://localhost:8000/api/products/type/" + productTypeId,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("access_token"),
+          },
+        }
+      );
+
+      const json = await response.json();
+      setProducts(json.data);
+    }
+
+    fetchData();
+  }, [productTypeId]);
+
   if (localStorage.getItem("access_token"))
     return (
       <div>
         <Navbar />
         <div className="container mt-3">
-          {contacts.map((item) => (
-            <ContactItem key={item.contactId} data={item} />
-          ))}
+          {products
+            .filter((item) => [25, 26, 27, 28, 29].includes(item.product_id))
+            .map((item) => (
+              <ProductItem key={item.product_id} data={item} />
+            ))}
         </div>
-        <select
-          value={commentTypeId}
-          onChange={(e) => setCommentTypeId(e.target.value)}
-        >
-          <option value={0}>ทุกประเภทสินค้า</option>
-          {commentTypes.map((item) => (
-            <option key={item.comment_type_id} value={item.comment_type_id}>
-              {item.comment_type_name}
-            </option>
-          ))}
-        </select>
+
+        <div className="btn me-3">
+          <select
+            value={commentTypeId}
+            onChange={(e) => setCommentTypeId(e.target.value)}
+          >
+            <option value={0}>ความพึงพอใจ</option>
+            {commentTypes.map((item) => (
+              <option key={item.comment_type_id} value={item.comment_type_id}>
+                {item.comment_type_name}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <Link to={"/comment/add"} className="btn btn-outline-primary me-3">
-          เพิ่ม
+          Comment
         </Link>
 
         <Link to={"/ReportComment"} className="btn btn-outline-primary me-3">
-          รายงาน
+          Report
         </Link>
 
         <div className="container mt-3">

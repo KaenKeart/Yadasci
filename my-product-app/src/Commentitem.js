@@ -13,13 +13,16 @@ export default function CommentItem(props) {
         <Link
           to={`/comment/${props.data.comment_id}`}
           className="btn btn-outline-primary me-3"
+          style={{ width: "80px", height: "40px", fontSize: "16px" }}
         >
           แก้ไข
         </Link>
         <button
+          id="Delete"
           type="button"
           className="btn btn-outline-danger"
           onClick={onDelete}
+          style={{ width: "80px", height: "40px", fontSize: "16px" }}
         >
           ลบ
         </button>
