@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { API_GET, API_POST } from "./api";
+import Footer from "./footer";
+import Navbar from "./Navbar";
 import UserItem from "./Useritem";
 
 export default function User() {
@@ -61,6 +63,7 @@ export default function User() {
   if (localStorage.getItem("access_token")) {
     return (
       <div className="container">
+        <Navbar />
         <Link to={"/register"} className="btn btn-outline-primary me-3">
           เพิ่ม
         </Link>
@@ -74,7 +77,9 @@ export default function User() {
             <UserItem key={item.user_id} data={item} onDelete={onDelete} />
           ))}
         </div>
+        <Footer />
       </div>
+
     );
   }
 
